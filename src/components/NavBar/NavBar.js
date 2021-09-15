@@ -7,7 +7,9 @@ const NavBar = () => {
   return (
     <div className="navbar-sticky-wrapper">
       <section className="navbar-logo-name">
-        <img src={Logo} alt="Logo" />
+        <Link to="/">
+          <img src={Logo} alt="Logo" />
+        </Link>
         <h1>Charles-Olivier Racine</h1>
       </section>
       <nav className="navbar-nav">

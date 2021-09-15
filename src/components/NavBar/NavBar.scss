@@ -1,20 +1,25 @@
 :root {
-  --dark-gray: rgba(51, 51, 51, 0.4);
+  --dark-gray: rgba(26, 26, 26, 0.8);
   --light-gray: #888;
   --fake-white: #eee;
+  --turquoise: rgb(110, 255, 211);
 }
 
 .navbar-sticky-wrapper {
   background-color: var(--dark-gray);
-  position: sticky;
+  position: absolute;
   display: flex;
+  top: 0;
+  z-index: 999;
+  width: 100vw;
   justify-content: space-between;
-  padding: 1em;
+  padding: 0.5em 0;
   color: var(--fake-white);
   .navbar-logo-name {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-left: 2em;
     img {
       width: 6em;
       height: auto;
@@ -32,25 +37,42 @@
       align-items: center;
       height: 100%;
       font-size: 1.5em;
-      * {
-        border-radius: 0.5em;
-      }
+      margin-right: 1em;
       .navbar-nav-items {
         margin-right: 2em;
-        display: flex;
-        justify-content: center;
-        padding: 0.5em;
-        &:after {
-          content: "";
-          position: absolute;
-          height: 1.5em;
-          width: 5px;
-          border-bottom: 5px solid var(--light-gray);
-        }
         &:last-child {
-          border: 5px solid var(--fake-white);
-          &:after {
+          font-weight: bold;
+          a:after {
             display: none;
+          }
+          a {
+            border: 5px solid var(--fake-white);
+            transition: all ease-in-out 200ms;
+            &:hover {
+              border: 5px solid transparent;
+              background-color: var(--turquoise);
+              color: var(--dark-gray);
+            }
+          }
+        }
+        a {
+          display: flex;
+          justify-content: center;
+          padding: 0.5em;
+          &:after {
+            content: "";
+            position: absolute;
+            height: 1.5em;
+            width: 5px;
+            border-bottom: 5px solid var(--fake-white);
+            transition: all ease-in-out 200ms;
+          }
+          &:hover {
+            color: var(--turquoise);
+            &:after {
+              border-bottom: 5px solid var(--turquoise);
+              width: 120px;
+            }
           }
         }
       }
