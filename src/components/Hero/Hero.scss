@@ -31,6 +31,7 @@
         max-height: 100%;
         object-fit: cover;
         transition: all 200ms linear;
+        opacity: 100%;
       }
       strong {
         position: absolute;
@@ -51,7 +52,6 @@
       &:hover {
         z-index: 1;
         filter: grayscale(0%);
-        filter: blur(50%);
         box-shadow: 0 0 1em 0.5em var(--turquoise);
         img {
           transform: scale(1.025);
