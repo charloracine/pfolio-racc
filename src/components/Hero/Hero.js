@@ -1,28 +1,13 @@
 import React from "react";
 import "./Hero.scss";
-import { Link } from "react-router-dom";
+import HeroCard from "../HeroCard/HeroCard";
 
 const Hero = () => {
   return (
     <div className="hero-container">
-      <section className="herocard-container">
-        <Link to="/projects">
-          <img src="/images/prog.jpg" alt="" />
-          <strong>Projets</strong>
-        </Link>
-      </section>
-      <section className="herocard-container">
-        <Link to="/about">
-          <img src="/images/prog.jpg" alt="" />
-          <strong>À propos</strong>
-        </Link>
-      </section>
-      <section className="herocard-container">
-        <Link to="contact">
-          <img src="/images/prog.jpg" alt="" />
-          <strong>Contacter</strong>
-        </Link>
-      </section>
+      <HeroCard src="/images/projet.jpg" cardTitle="Projets" link="/projects" />
+      <HeroCard src="/images/hello.jpg" cardTitle="À propos" link="/about" />
+      <HeroCard src="/images/message.jpg" cardTitle="Contacter" link="/contact" />
     </div>
   );
 };
