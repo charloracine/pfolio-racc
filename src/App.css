@@ -1,5 +1,6 @@
 .App{
   font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.1em;
 }
 
 /* @keyframes App-logo-spin {

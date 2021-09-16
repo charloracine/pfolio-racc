@@ -1,3 +1,10 @@
+:root {
+    --dark-gray: rgba(26, 26, 26, 0.8);
+    --light-gray: #888;
+    --fake-white: #eee;
+    --turquoise: rgb(110, 255, 211);
+  }
+
 .herocard-container {
   flex: 1;
   display: flex;
@@ -57,8 +64,21 @@
   }
 }
 
-@media screen and (max-width: 1080px)  {
-    .herocard-container{
-        height: 0;
+@media screen and (max-width: 1080px) {
+  .herocard-container {
+    height: 0;
+    a {
+      filter: none;
+      img {
+        opacity: 0.5;
+      }
+      strong {
+        font-size: 2em;
+        border: none;
+        color: var(--turquoise);
+        box-shadow: 0.3em 0.3em 0 0 var(--turquoise),
+          inset 0.3em 0.3em 0 0 var(--turquoise);
+      }
     }
+  }
 }
