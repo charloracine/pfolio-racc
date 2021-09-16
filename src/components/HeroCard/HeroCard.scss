@@ -1,9 +1,3 @@
-:root {
-  --dark-gray: rgba(26, 26, 26, 0.8);
-  --light-gray: #888;
-  --fake-white: #eee;
-  --turquoise: rgb(110, 255, 211);
-}
 
 .herocard-container {
   flex: 1;
@@ -28,7 +22,7 @@
       max-height: 100%;
       object-fit: cover;
       transition: all 200ms linear;
-      opacity: 1;
+      opacity: 0.9;
     }
     strong {
       position: absolute;
@@ -41,8 +35,8 @@
       box-shadow: 0;
       &:hover {
         animation: pulse 1s;
-        color: var(--turquoise);
-        border: 5px solid var(--turquoise);
+        color: var(--light-blue);
+        border: 5px solid var(--light-blue);
         box-shadow: 0 0 0 0.5em rgba(#fff, 0);
       }
     }
@@ -60,7 +54,7 @@
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 var(--turquoise);
+    box-shadow: 0 0 0 0 var(--light-blue);
   }
 }
 
@@ -70,19 +64,19 @@
     a {
       filter: none;
       img {
-        opacity: 0.5;
+        opacity: 0.4;
       }
       strong {
         font-size: 2em;
         border: none;
-        color: var(--turquoise);
-        box-shadow: 0.3em 0.3em 0 0 var(--turquoise),
-          inset 0.3em 0.3em 0 0 var(--turquoise);
+        color: var(--light-blue);
+        box-shadow: 0.3em 0.3em 0 0 var(--light-blue),
+          inset 0.3em 0.3em 0 0 var(--light-blue);
         &:hover {
           animation: none;
           color: var(--dark-gray);
-          box-shadow: 0 0 0 0 var(--turquoise),
-            inset 6em 3.5em 0 0 var(--turquoise);
+          box-shadow: 0 0 0 0 var(--light-blue),
+            inset 6em 3.5em 0 0 var(--light-blue);
         }
       }
     }
