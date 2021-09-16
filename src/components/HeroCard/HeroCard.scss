@@ -35,8 +35,6 @@
       box-shadow: 0;
       &:hover {
         animation: pulse 1s;
-        color: var(--light-blue);
-        border: 5px solid var(--light-blue);
         box-shadow: 0 0 0 0.5em rgba(#fff, 0);
       }
     }
@@ -47,6 +45,10 @@
       img {
         transform: scale(1.025);
         opacity: 0.6;
+      }
+      strong{
+          color: var(--light-blue);
+          border: 5px solid var(--light-blue);
       }
     }
   }
