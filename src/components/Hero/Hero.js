@@ -1,13 +1,16 @@
 import React from "react";
 import "./Hero.scss";
 import HeroCard from "../HeroCard/HeroCard";
+import Data from "../../data/data.json";
+
+const CardsData = [...Data.card];
 
 const Hero = () => {
   return (
     <div className="hero-container">
-      <HeroCard src="/images/projet.jpg" cardTitle="Projets" link="/projects" />
-      <HeroCard src="/images/hello.jpg" cardTitle="À propos" link="/about" />
-      <HeroCard src="/images/message.jpg" cardTitle="Contacter" link="/contact" />
+      {CardsData.map((e) => (
+        <HeroCard key={e.id} src={e.images.web} cardTitle={e.name} link={e.path} />
+      ))}
     </div>
   );
 };

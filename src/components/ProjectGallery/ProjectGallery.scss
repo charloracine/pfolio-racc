@@ -1,0 +1,24 @@
+// <section className="project-gallery-wrapper">
+//       {data.map((e) => (
+//         <ProjectItem
+//           key={e.id}
+//           name={e.name}
+//           date={e.date}
+//           platform={e.platform}
+//           language={e.language}
+//           desc={e.description}
+//           images={e.images}
+//         />
+//       ))}
+//     </section>
+
+.project-gallery-wrapper{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    overflow: hidden;
+    padding-top: 10em;
+}

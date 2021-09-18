@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import ProjectGallery from "../ProjectGallery/ProjectGallery";
 
 const Projects = () => {
-    return (
-        <>
-            Projects page
-        </>
-    )
-}
+  return (
+    <>
+      <ProjectGallery />
+    </>
+  );
+};
 
-export default Projects
+export default Projects;

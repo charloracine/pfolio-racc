@@ -1,0 +1,78 @@
+// <article className="project-wrapper">
+//       <div className="project-placeholder">
+//         <div className="project-info">
+//           <strong className="project-title">{name}</strong>
+//           <div className="extra-info">
+//             <p>{platform}</p>
+//             <p>{language}</p>
+//             <p>{date}</p>
+//           </div>
+//           <p className="project-description">{desc}</p>
+//         </div>
+//         <div className="project-img">
+//           <img src={images.show.web} alt={images.show.alt} />
+//         </div>
+//         <div className="project-code">
+//           <img src={images.prog.web} alt={images.prog.alt} />
+//         </div>
+//       </div>
+//     </article>
+
+.project-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70em;
+  padding: 10em 0;
+  border-bottom: 1px solid black;
+  .project-placeholder {
+    width: 50em;
+    height: 40em;
+    border: 1px solid black;
+    position: relative;
+    .project-info {
+      position: absolute;
+      left: -250px;
+      max-width: 650px;
+      line-height: 2rem;
+      letter-spacing: 2px;
+      .project-title {
+          font-size: 2rem;
+      }
+      .extra-info {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin: 0.5em 0;
+          p{
+              margin-left: 1.5em;
+          }
+      }
+    }
+    .project-description {
+        text-indent: 1.5rem;
+        text-align: justify;
+    }
+    .project-img {
+      position: absolute;
+      top: -100px;
+      right: -250px;
+      img {
+        width: 500px;
+        height: 300px;
+      }
+    }
+    .project-code {
+      position: absolute;
+      left: -250px;
+      bottom: -5em;
+      max-height: 350px;
+      overflow-y: scroll;
+      img {
+        width: 650px;
+        height: 1000px;
+      }
+    }
+  }
+}

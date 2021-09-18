@@ -1,14 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./NavBar.scss";
-import Logo from "./Logo.svg";
 import { Link } from "react-router-dom";
+import Data from "../../data/data.json";
+
+const logoData = { ...Data.logo };
+const navData = [...Data.nav];
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
-
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
 
   return (
     <>
@@ -17,25 +18,20 @@ const NavBar = () => {
       </div>
       <div className={`navbar-sticky-wrapper ${click && "open"}`}>
         <section className="navbar-logo-name">
-          <Link to="/" onClick={closeMobileMenu}>
-            <img src={Logo} alt="Logo" />
+          <Link to={logoData.path} onClick={closeMobileMenu}>
+            <img src={logoData.src} alt={logoData.alt} />
           </Link>
-          <h1>Charles-Olivier Racine</h1>
+          <h1>{`${Data.user.prenom} ${Data.user.nom}`}</h1>
         </section>
         <nav className="navbar-nav">
           <ul>
-            <li className="navbar-nav-items">
-              <Link to="/" onClick={closeMobileMenu}>Accueil</Link>
-            </li>
-            <li className="navbar-nav-items">
-              <Link to="/projects" onClick={closeMobileMenu}>Projets</Link>
-            </li>
-            <li className="navbar-nav-items">
-              <Link to="/about" onClick={closeMobileMenu}>À propos</Link>
-            </li>
-            <li className="navbar-nav-items">
-              <Link to="/contact" onClick={closeMobileMenu}>Contacter</Link>
-            </li>
+            {navData.map((e) => (
+              <li key={e.id} className="navbar-nav-items">
+                <Link to={e.path} onClick={closeMobileMenu}>
+                  {e.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
