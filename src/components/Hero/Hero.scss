@@ -1,4 +1,6 @@
 .hero-container {
+  position: absolute;
+  top: 0;
   display: flex;
   height: 100vh;
   background-color: black;
@@ -6,5 +8,6 @@
 @media screen and (max-width: 1080px)  {
     .hero-container{
       flex-direction: column;
+      width: 100vw;
     }
 }

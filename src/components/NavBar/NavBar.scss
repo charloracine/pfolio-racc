@@ -1,7 +1,7 @@
 
 .navbar-sticky-wrapper {
   background-color: rgba(26, 26, 26, 0.9);
-  position: absolute;
+  position: sticky;
   display: flex;
   top: 0;
   z-index: 999;
@@ -77,8 +77,9 @@
 }
 .menu-icon {
   display: none;
+  position: sticky;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1580px) {
   .navbar-sticky-wrapper {
     .navbar-logo-name {
       h1 {
@@ -91,7 +92,9 @@
 @media screen and (max-width: 1080px) {
   .menu-icon {
     display: block;
-    position: absolute;
+    position: sticky;
+    top: 0;
+    left: 0;
     z-index: 1000;
     font-size: 2em;
     padding: 1em;

@@ -2,8 +2,8 @@
   --dark-gray: rgba(26, 26, 26, 0.8);
   --light-gray: #888;
   --fake-white: #eee;
-  --turquoise: rgba(59,160,117,255);
-  --light-blue: rgba(0,194,255,255);
+  --turquoise: rgb(59,160,117);
+  --light-blue: rgb(0,194,255);
 }
 .App{
   font-family: 'Roboto', sans-serif;

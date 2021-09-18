@@ -1,9 +1,13 @@
 import React from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import "./ProjectItem.scss";
+import Script from "./superNova.js";
 
-const ProjectItem = ({ name, date, platform, language, desc, images }) => {
+const ProjectItem = ({ name, date, platform, language, desc, images, id }) => {
+
   return (
-    <article className="project-wrapper">
+    <article className={`project-wrapper ${id % 2 === 0 && "pair"}`} id={name}>
       <div className="project-placeholder">
         <div className="project-info">
           <strong className="project-title">{name}</strong>
@@ -18,7 +22,12 @@ const ProjectItem = ({ name, date, platform, language, desc, images }) => {
           <img src={images.show.web} alt={images.show.alt} />
         </div>
         <div className="project-code">
-          <img src={images.prog.web} alt={images.prog.alt} />
+          <SyntaxHighlighter
+            language={language}
+            style={a11yDark}
+          >
+            {Script}
+          </SyntaxHighlighter>
         </div>
       </div>
     </article>
