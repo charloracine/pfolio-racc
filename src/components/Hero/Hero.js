@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div className="hero-container">
       {CardsData.map((e) => (
-        <HeroCard key={e.id} src={e.images.web} cardTitle={e.name} link={e.path} />
+        <HeroCard key={e.id} src={e.images} cardTitle={e.name} link={e.path} />
       ))}
     </div>
   );

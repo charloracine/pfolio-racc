@@ -6,7 +6,16 @@ import useWindowDimensions from "../../WindowDimensionsHook/useWindowDimensions"
 import "./ProjectItem.scss";
 import Script from "./superNova.js";
 
-const ProjectItem = ({ name, date, matiere, platform, language, desc, images, id }) => {
+const ProjectItem = ({
+  name,
+  date,
+  matiere,
+  platform,
+  language,
+  desc,
+  images,
+  id,
+}) => {
   const { width } = useWindowDimensions();
 
   return (
@@ -33,7 +42,10 @@ const ProjectItem = ({ name, date, matiere, platform, language, desc, images, id
             x={[20, 0]}
             disabled={width < 1580}
           >
-            <img src={images.show.web} alt={images.show.alt} />
+            <img
+              src={width <= 425 ? images.show.mobile : images.show.web}
+              alt={images.show.alt}
+            />
           </Parallax>
           <div className="project-code">
             <SyntaxHighlighter language={language} style={a11yDark}>
