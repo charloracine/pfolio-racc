@@ -138,39 +138,6 @@ public class IslandGenerator : MonoBehaviour
         }
     }
 
-    private float GenerateDomainNoise(int x, int z)
-    {
-        Vector2 domainOffset = GenerateDomainOffset(x, z);
-        return OctavePerlin(x + domainOffset.x, z + domainOffset.y);
-    }
-
-    private Vector2 GenerateDomainOffset(int x, int z)
-    {
-        float noiseX = OctavePerlin(x, z) * coeDetail.x;
-        float noiseY = OctavePerlin(x, z) * coeDetail.y;
-        return new Vector2(noiseX, noiseY);
-    }
-
-    private float OctavePerlin(float x, float z)
-    {
-        x *= detail;
-        z *= detail;
-        x += detail;
-        z += detail;
-
-        float total = 0;
-        float frequency = 1;
-        float amplitude = 1;
-        float persistance = 0.4f;
-        for (int i = 0; i < attenuateurDW; i++)
-        {
-            total += Mathf.PerlinNoise((offset.x + x) * frequency, (offset.y + z) * frequency) * amplitude;
-            amplitude *= persistance;
-            frequency *= 2;
-        }
-        return total;
-    }
-
     void DessinerIle(float[,] map)
     {
         int larg = map.GetLength(0);

@@ -12,7 +12,7 @@ const NavBar = () => {
   const closeMobileMenu = () => setClick(false);
 
   return (
-    <>
+    <section className="menu">
       <div className="menu-icon" onClick={handleClick}>
         <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
@@ -35,7 +35,7 @@ const NavBar = () => {
           </ul>
         </nav>
       </div>
-    </>
+    </section>
   );
 };
 
