@@ -31,6 +31,7 @@ const ProjectGallery = () => {
               key={e.id}
               name={e.name}
               date={e.date}
+              matiere={e.matiere}
               platform={e.platform}
               language={e.language}
               desc={e.description}

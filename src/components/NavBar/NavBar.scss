@@ -132,7 +132,6 @@
   .navbar-sticky-wrapper {
     display: none;
     width: 0;
-    transition: all 200ms linear;
     &.open {
       position: absolute;
       display: flex;
@@ -144,7 +143,6 @@
         justify-content: center;
         flex-direction: column;
         h1 {
-          font-size: 1.5em;
           margin-top: 0.5em;
         }
       }

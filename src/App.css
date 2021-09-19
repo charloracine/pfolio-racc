@@ -9,6 +9,21 @@
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.1em;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkgray;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 /* @keyframes App-logo-spin {
   from {

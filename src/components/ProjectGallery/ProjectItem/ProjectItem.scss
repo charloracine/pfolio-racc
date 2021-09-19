@@ -10,6 +10,9 @@
         box-shadow: 1em 1em 1em 0 var(--light-blue);
         border: 2px solid var(--dark-gray);
         background-color: var(--turquoise);
+        .project-img {
+          background-color: var(--light-blue);
+        }
       }
     }
   }
@@ -26,6 +29,10 @@
       box-shadow: 1em 1em 1em 0 var(--turquoise);
       border: 2px solid var(--dark-gray);
       background-color: var(--light-blue);
+      .project-img {
+        border: 2px solid var(--dark-gray);
+        background-color: var(--turquoise);
+      }
     }
     .project-info {
       background-color: var(--dark-gray);
@@ -58,8 +65,12 @@
     }
     .project-img {
       position: absolute;
+      border: 2px solid var(--dark-gray);
       top: -100px;
+      transition: all linear 200ms;
       right: -250px;
+      border-right: 2px solid transparent;
+      border-bottom: 2px solid transparent;
       img {
         width: 500px;
         height: 300px;
@@ -72,25 +83,6 @@
       height: 400px;
       width: 1000px;
       overflow-y: scroll;
-      /* width */
-      &::-webkit-scrollbar {
-        width: 10px;
-      }
-
-      /* Track */
-      &::-webkit-scrollbar-track {
-        background: #222;
-      }
-
-      /* Handle */
-      &::-webkit-scrollbar-thumb {
-        background: darkgray;
-      }
-
-      /* Handle on hover */
-      &::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
       img {
         width: 650px;
         height: 1000px;
@@ -101,21 +93,8 @@
 
 @media screen and (max-width: 1580px) {
   .project-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70em;
     padding: 8em;
-    &.pair {
-      .project-placeholder {
-        box-shadow: 1em 1em 1em 0 var(--light-blue);
-        border: 2px solid var(--dark-gray);
-        background-color: var(--turquoise);
-      }
-    }
-    border-bottom: 1px solid black;
     .project-placeholder {
-      width: 50em;
       height: 70em;
       display: flex;
       flex-direction: column;
@@ -143,40 +122,22 @@
     width: 65vw;
     padding: 6em;
     margin-left: 4em;
-    &.pair {
-      .project-placeholder {
-        box-shadow: 1em 1em 1em 0 var(--light-blue);
-        border: 2px solid var(--dark-gray);
-        background-color: var(--turquoise);
-      }
-    }
-    border-bottom: 1px solid black;
     .project-placeholder {
-      width: 100%;
+      width: 65vw;
       height: 70em;
-      display: flex;
-      flex-direction: column;
       justify-content: flex-start;
-      align-items: center;
-      box-shadow: 1em 1em 1em 0 var(--turquoise);
-      border: 2px solid var(--dark-gray);
-      background-color: var(--light-blue);
       .project-info {
         background-color: transparent;
         border: transparent;
-        position: static;
         line-height: normal;
       }
       .project-img {
-        position: static;
-        margin-top: 2px;
         img {
-          width: 100%;
           height: auto;
+          width: 100%;
         }
       }
       .project-code {
-        position: static;
         width: 100%;
         pre {
           overflow-x: scroll;
@@ -192,46 +153,9 @@
     width: 90vw;
     padding: 2em;
     margin: 0;
-    &.pair {
-      .project-placeholder {
-        box-shadow: 1em 1em 1em 0 var(--light-blue);
-        border: 2px solid var(--dark-gray);
-        background-color: var(--turquoise);
-      }
-    }
     border-bottom: 1px solid black;
     .project-placeholder {
-      width: 100%;
-      height: 70em;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      box-shadow: 1em 1em 1em 0 var(--turquoise);
-      border: 2px solid var(--dark-gray);
-      background-color: var(--light-blue);
-      .project-info {
-        background-color: transparent;
-        border: transparent;
-        position: static;
-        line-height: normal;
-      }
-      .project-img {
-        position: static;
-        margin-top: 2px;
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
-      .project-code {
-        position: static;
-        width: 100%;
-        pre {
-          overflow-x: scroll;
-          font-size: 0.8rem;
-        }
-      }
+      width: 90vw;
     }
   }
 }

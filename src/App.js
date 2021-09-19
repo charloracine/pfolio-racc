@@ -6,8 +6,18 @@ import Home from "./components/Pages/Home";
 import Projects from "./components/Pages/Projects";
 import About from "./components/Pages/About";
 import Contact from "./components/Pages/Contact";
+import { useLayoutEffect } from "react";
+import { useController } from "react-scroll-parallax";
 
 function App() {
+  const { parallaxController } = useController();
+
+  useLayoutEffect(() => {
+    const handler = () => parallaxController.update();
+    window.addEventListener("load", handler);
+    return () => window.removeEventListener("load", handler);
+  }, [parallaxController]);
+
   return (
     <div className="App">
       <Router>
