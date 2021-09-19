@@ -1,3 +1,7 @@
+.menu {
+  position: fixed;
+  z-index: 1000;
+}
 .navbar-sticky-wrapper {
   background-color: rgba(26, 26, 26, 0.9);
   position: sticky;
@@ -81,16 +85,14 @@
 }
 @media screen and (max-width: 1440px) {
   .menu {
-    position: fixed;
-    z-index: 1000;
     .navbar-sticky-wrapper {
       .navbar-logo-name {
         h1 {
           font-size: 2em;
         }
       }
-      .navbar-nav{
-        .navbar-nav-items{
+      .navbar-nav {
+        .navbar-nav-items {
           font-size: 1.5rem;
         }
       }
@@ -105,8 +107,8 @@
           font-size: 1.5em;
         }
       }
-      .navbar-nav{
-        .navbar-nav-items{
+      .navbar-nav {
+        .navbar-nav-items {
           font-size: 1rem;
         }
       }
