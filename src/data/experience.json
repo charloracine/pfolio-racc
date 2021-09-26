@@ -1,0 +1,159 @@
+[
+    {
+        "id": 0,
+        "titre": "Compétences",
+        "cards": [
+            {
+                "id": 0,
+                "where": "Programmation",
+                "what": "Web",
+                "type": "Logiciels et librairies",
+                "listed": [
+                    "Git.",
+                    "Npm.",
+                    "React.",
+                    "Github Desktop.",
+                    "Visual Studio Code."
+                ]
+            },
+            {
+                "id": 1,
+                "where": "Programmation",
+                "what": "Web",
+                "type": "Principaux langages",
+                "listed": [
+                    "SASS.",
+                    "HTML 5.",
+                    "JSX, ES7.",
+                    "Javascript.",
+                    "Json, sql, sqlite."
+                ]
+            },
+            {
+                "id": 2,
+                "where": "Programmation",
+                "what": "Jeu-Vidéo",
+                "type": "Logiciels et langages",
+                "listed": [
+                    "C#.",
+                    "Unity 2D & 3D.",
+                    "Générations procédurale.",
+                    "Intelligence artificiel simple.",
+                    "Programmation orientée objet."
+                ]
+            },
+            {
+                "id": 3,
+                "where": "Générale",
+                "what": "Logiciels",
+                "type": "Principaux",
+                "listed": [
+                    "Illustrator.",
+                    "Photoshop.",
+                    "Premiere Pro.",
+                    "Suite Office 365.",
+                    "Teams, Onedrive, Slack, Dropbox..."
+                ]
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "titre": "Expériences professionnelles",
+        "cards": [
+            {
+                "id": 0,
+                "where": "Écoles ESTIME",
+                "what": "Formateur, Animateur",
+                "type": "Tâches principales",
+                "listed": [
+                    "Diriger un groupe.",
+                    "Respecter un mandat précis.",
+                    "Création de contenu multimédia.",
+                    "Développement de nouvelles activités.",
+                    "Donner accès à la programmation à tous."
+                ]
+            },
+            {
+                "id": 1,
+                "where": "Groupe BMR",
+                "what": "Spécialiste de la vente",
+                "type": "Tâches principales",
+                "listed": [
+                    "Intéragir avec le client.",
+                    "Comprendre un besoin.",
+                    "Responsable d'un département.",
+                    "Préparer la commande du client.",
+                    "Conseiller des produits et/ou des solutions."
+                ]
+            },
+            {
+                "id": 2,
+                "where": "Proxim",
+                "what": "Caissier commis",
+                "type": "Tâches principales",
+                "listed": [
+                    "Être pro-client.",
+                    "Diriger le client.",
+                    "Vente de lotterie.",
+                    "Entretenir le magasin.",
+                    "Réception de marchandise."
+                ]
+            },
+            {
+                "id": 3,
+                "where": "Chalet des Érables",
+                "what": "Plongeur",
+                "type": "Aptitudes développées",
+                "listed": [
+                    "Être efficace.",
+                    "Travailler en chaîne.",
+                    "Être ponctuel, faire de « l'over-time. »",
+                    "Accomplir la même tâche plusieurs fois par heure."
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "titre": "Expériences personnelles",
+        "cards": [
+            {
+                "id": 0,
+                "where": "Participant",
+                "what": "Scoutisme",
+                "type": "8 ans",
+                "listed": [
+                    "Esprit d'équipe et entraide.",
+                    "Curieux, rigoureux et altruiste.",
+                    "Se débrouiller et être autonome.",
+                    "Être à l'écoute des besoins d'autruis.",
+                    "Polyvalent, optimiste et facilité à s'adapter."
+                ]
+            },
+            {
+                "id": 1,
+                "where": "Humanitaire",
+                "what": "Bénévolat",
+                "type": "En quelques points...",
+                "listed": [
+                    "Relais pour la vie.",
+                    "Voyage humanitaire au Costa Rica.",
+                    "Assistance lors d'un tournois RSEQ.",
+                    "Ma ville sans déchêt. (Projet personnel avec les scouts)"
+                ]
+            },
+            {
+                "id": 2,
+                "where": "Cégep de Saint-Jérôme",
+                "what": "Implication",
+                "type": "En quelques points...",
+                "listed": [
+                    "Club de bande dessinée.",
+                    "Équipe de Esport « Les Pandas ».",
+                    "Administrateur à la Fondation du Cégep de Saint-Jérôme."
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,98 @@
+.ma-photo {
+  position: absolute;
+  width: 65em;
+  height: 100%;
+  mix-blend-mode: lighten;
+  filter: blur(1px);
+  z-index: 100;
+  overflow: hidden;
+  img {
+    min-width: 100%;
+    min-height: 250%;
+  }
+}
+.svg-wrapper {
+  width: 1000px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  .svg-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .box-shadow {
+      box-shadow: 0px 0px 200px 200px rgba(0, 194, 255, 0.5);
+      border-radius: 50%;
+      animation: breathShadow 4s ease-in-out infinite normal;
+      z-index: 0;
+      height: 0;
+      width: 0;
+      position: absolute;
+    }
+    svg {
+      z-index: 1;
+    }
+  }
+}
+
+.bottom-nav {
+    margin-top: 2em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4em;
+    .r-arrow {
+      border: 1px solid;
+      border-radius: 6em;
+      padding: 3em;
+      transition: all linear 200ms;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        border: 3px solid;
+        border-radius: 6em;
+        padding: 1em;
+        animation: breath 4s ease-in-out infinite normal;
+        position: absolute;
+      }
+      &:hover {
+        color: var(--turquoise);
+        animation: pulse 500ms;
+        box-shadow: 0 0 0 1em rgba(#fff, 0);
+      }
+    }
+    p {
+      margin-left: 1em;
+    }
+  }
+
+  @keyframes breathShadow {
+    0% {
+      box-shadow: 0px 0px 350px 350px rgba(0, 194, 255, 0.5);
+    }
+    50% {
+      box-shadow: 0px 0px 400px 400px rgba(0, 194, 255, 0.5);
+    }
+    100% {
+      box-shadow: 0px 0px 350px 350px rgba(0, 194, 255, 0.5);
+    }
+  }
+  @keyframes breath {
+    0% {
+      padding: 1em;
+    }
+    50% {
+      padding: 2em;
+    }
+    100% {
+      padding: 1em;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 #fff;
+    }
+  }

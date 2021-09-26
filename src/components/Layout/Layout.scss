@@ -1,0 +1,64 @@
+main {
+  background-color: var(--dark-gray);
+  z-index: 0;
+  padding-bottom: 1px;
+}
+
+.background-fixed {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  right: 0;
+  height: 100%;
+}
+
+.panel-container {
+  display: flex;
+  height: 85vh;
+  align-items: center;
+  a {
+    transition: all linear 200ms;
+    &:hover {
+      color: var(--turquoise);
+    }
+  }
+  .left-panel {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+    z-index: 10000;
+    margin-left: 5em;
+
+    .homepage-info-wrapper {
+      margin-left: 75px;
+      margin-top: 5em;
+      p:nth-child(1) {
+        text-transform: uppercase;
+      }
+      h1 {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 6rem;
+        margin: 0.5em 0;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkgray;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
