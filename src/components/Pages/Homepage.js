@@ -1,79 +1,53 @@
 import React from "react";
-import Layout from "../Layout/Layout";
-import { Link } from "react-router-dom";
-import "./Homepage.scss";
-
+import { Column, Container } from "../Container/Container";
+import { StackedImage } from "../Image/Image";
+import { Body1, TypoH1, TypoH2 } from "../Typo/Typo";
+import { Card } from "../Card/Card";
+import { colors } from "../Colors/Colors";
+import { ButtonGroup, Button } from "../Button/Button";
+import { useHistory } from "react-router";
 const Homepage = () => {
-  const hexScale = 5;
-
-  const style = {
-    height: "100vh",
-  };
-
-  const infos = {
-    leftPanel: {
-      titre: "développeur web frontend",
-      nom: "charles-o.",
-      text: {
-        firstRow: "Finissant en Techniques d’intégration multimédia, ",
-        secondRow: " profil logique. Mention DEC+ Ultra.",
-      },
-    },
-  };
-
-  const rightPanel = () => {
-    return (
-      <>
-        <div className="ma-photo">
-          <img src="/images/photo4.png" alt="Moi sur un rocher" />
-        </div>
-        <div className="svg-wrapper">
-          <div className="svg-holder">
-            <div className="box-shadow"></div>
-            <svg height={`${180 * hexScale}`} width={`${155 * hexScale}`}>
-              <defs>
-                <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="rgba(59, 160, 117, 1)" />
-                  <stop offset="100%" stopColor="rgba(44, 184, 215, 0.25)" />
-                </linearGradient>
-              </defs>
-              <polygon
-                fill="url(#grad)"
-                points={`0 ${50 * hexScale}, ${80 * hexScale} 0, ${
-                  155 * hexScale
-                } ${50 * hexScale}, ${155 * hexScale} ${130 * hexScale}, ${
-                  80 * hexScale
-                } ${180 * hexScale}, 0 ${130 * hexScale}`}
-              />
-            </svg>
-          </div>
-        </div>
-      </>
-    );
-  };
-
-  const bottomNav = () => {
-    return (
-      <div className="bottom-nav">
-        <Link to="/portfolio">
-          <div className="r-arrow">
-            <i className="fas fa-long-arrow-alt-right"></i>
-          </div>
-        </Link>
-        <p>
-          <Link to="/portfolio">Portfolio</Link>
-        </p>
-      </div>
-    );
-  };
+  const { push } = useHistory();
 
   return (
-    <Layout
-      infos={infos}
-      mainStyleHeight={style}
-      rightPanel={rightPanel}
-      autreFx={bottomNav}
-    ></Layout>
+    <Container dir="column" size={1} pd={0} pdt="1em">
+      <Column size="1" dir="column">
+        <TypoH1>DEVELOPPEUR WEB FRONTEND</TypoH1>
+        <Column justify="center">
+          <StackedImage pd="1em 0" className="invisible">
+            <img src="/images/Logo.svg" alt="Mon logo à moi" className="logo" />
+            <img
+              src="/images/maphoto.png"
+              alt="Moi sur une roche"
+              className="moi"
+            />
+          </StackedImage>
+        </Column>
+        <Card>
+          <TypoH2 color={colors.primary}>Charles-O.</TypoH2>
+          <Body1 color={colors.dark}>
+            Je suis étudiant finissant en Techniques d’intégration multimédia,
+            profil logique. Mention DEC+ Ultra.
+          </Body1>
+          <Button
+            size="1"
+            color={colors.comp}
+            margin="0 0 0.5em 0"
+            onClick={() => push("/portfolio")}
+          >
+            Portfolio
+          </Button>
+          <ButtonGroup>
+            <Button size="1" outlined onClick={() => push("/about")}>
+              À propos
+            </Button>
+            <Button size="1" outlined onClick={() => push("/contact")}>
+              Contacter
+            </Button>
+          </ButtonGroup>
+        </Card>
+      </Column>
+    </Container>
   );
 };
 

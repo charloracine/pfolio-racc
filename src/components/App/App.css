@@ -1,0 +1,26 @@
+:root {
+  --dark-gray: rgba(26, 26, 26, 0.8);
+  --light-gray: #888;
+  --fake-white: #eee;
+  --turquoise: rgb(59, 160, 117);
+  --light-blue: rgb(0, 194, 255);
+}
+
+* {
+  z-index: 10;
+}
+
+.App {
+  background-color: #202020;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

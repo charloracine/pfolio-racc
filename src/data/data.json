@@ -1,0 +1,44 @@
+[
+    {
+        "id": 0,
+        "nom": "SuperNova",
+        "cours": "Jeux Vidéo",
+        "resume": "lorem",
+        "tech": [
+            "allo",
+            "ui",
+            "bjr"
+        ],
+        "images": [
+            "maphoto.png"
+        ]
+    },
+    {
+        "id": 1,
+        "nom": "SuperDumb",
+        "cours": "Jeux Vidéo",
+        "resume": "lorem",
+        "tech": [
+            "allo",
+            "ui",
+            "bjr"
+        ],
+        "images": [
+            "maphoto.png"
+        ]
+    },
+    {
+        "id": 2,
+        "nom": "SuperTroll",
+        "cours": "Jeux Vidéo",
+        "resume": "lorem",
+        "tech": [
+            "allo",
+            "ui",
+            "bjr"
+        ],
+        "images": [
+            "maphoto.png"
+        ]
+    }
+]
