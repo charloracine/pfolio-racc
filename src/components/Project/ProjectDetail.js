@@ -5,7 +5,7 @@ import LinkWithIcon from "../Link/LinkWithIcon";
 import { Card } from "../Card/Card";
 import { colors } from "../Colors/Colors";
 import { SideMenu } from "../AppBar/SideMenu";
-import { TypoH1 } from "../Typo/Typo";
+import { Body1, DoubleListItem, ListItem, TypoH1 } from "../Typo/Typo";
 import { useParams } from "react-router";
 
 const ProjectDetail = ({
@@ -55,10 +55,18 @@ const ProjectDetail = ({
       </Bar>
       <Container pdt="2em" pdl="0">
         <Column width="100vw">
-          <Card
-            justify="flex-start"
-            pd="2em 1em"
-          ></Card>
+          <Card justify="flex-start" pd="2em 1em">
+            <DoubleListItem>
+              <TypoH1 color={colors.secondary}>Cours :</TypoH1>
+              <TypoH1 color={colors.dark}>{cours}</TypoH1>
+            </DoubleListItem>
+            <TypoH1 color={colors.secondary}>Résumé :</TypoH1>
+            <Body1 color={colors.dark}>{resume}</Body1>
+            <TypoH1 color={colors.secondary}>Logiciels et technologies utilisées :</TypoH1>
+            {tech.map((value) => (
+              <ListItem color={colors.dark}>{value}</ListItem>
+            ))}
+          </Card>
         </Column>
       </Container>
     </SideMenu>

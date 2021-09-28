@@ -1,6 +1,5 @@
 import React from "react";
 import { Column, Container } from "../Container/Container";
-import { StackedImage } from "../Image/Image";
 import { Body1, TypoH1, TypoH2 } from "../Typo/Typo";
 import { Card } from "../Card/Card";
 import { colors } from "../Colors/Colors";

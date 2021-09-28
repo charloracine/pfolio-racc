@@ -3,11 +3,11 @@
         "id": 0,
         "nom": "SuperNova",
         "cours": "Jeux Vidéo",
-        "resume": "lorem",
+        "resume": "Je suis un jeu video interessant",
         "tech": [
             "allo",
-            "ui",
-            "bjr"
+            "github",
+            "bonjour batman"
         ],
         "images": [
             "maphoto.png"
@@ -21,7 +21,7 @@
         "tech": [
             "allo",
             "ui",
-            "bjr"
+            "salut fred"
         ],
         "images": [
             "maphoto.png"
@@ -35,7 +35,7 @@
         "tech": [
             "allo",
             "ui",
-            "bjr"
+            "hahahahahhahahahah"
         ],
         "images": [
             "maphoto.png"
