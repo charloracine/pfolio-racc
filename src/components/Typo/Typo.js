@@ -11,6 +11,17 @@ export const TypoH1 = styled.h1`
   font-weight: 700;
   line-height: 1.5rem;
   font-size: 1.2rem;
+  margin: ${(props) => props.margin};
+  color: ${colors.white};
+  color: ${(props) => props.color};
+`;
+export const TypoH3 = styled.h1`
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   color: ${colors.white};
   color: ${(props) => props.color};
 `;
@@ -19,6 +30,7 @@ export const TypoH2 = styled.h1`
   line-height: 1.5rem;
   font-size: 1.2rem;
   margin: 0;
+  margin: ${(props) => props.margin};
   color: ${colors.white};
   color: ${(props) => props.color};
 `;
@@ -60,6 +72,7 @@ export const Icon = styled.i`
   font-size: ${(props) => props.fontSize};
   padding: 0.5em;
   padding: ${(props) => props.pd};
+  margin: ${(props) => props.margin};
   border-radius: 5em;
   border-radius: ${(props) => props.br};
   border: ${(props) => props.border};

@@ -1,13 +1,15 @@
 [
     {
         "id": 0,
-        "nom": "SuperNova",
-        "cours": "Jeux Vidéo",
-        "resume": "Je suis un jeu video interessant",
+        "nom": "Mon portfolio",
+        "cours": "Projet personnel",
+        "resume": "L'application sur laquelle vous lisez ceci est mon portfolio. Il est « Mobile-First », c'est mon outil promotionnel #1.",
         "tech": [
-            "allo",
-            "github",
-            "bonjour batman"
+            "ReactJS",
+            "JavaScript",
+            "Styled Components",
+            "HTML & SCSS",
+            "Git & Netlify"
         ],
         "images": [
             "maphoto.png"
@@ -15,13 +17,13 @@
     },
     {
         "id": 1,
-        "nom": "SuperDumb",
+        "nom": "SuperNova",
         "cours": "Jeux Vidéo",
-        "resume": "lorem",
+        "resume": "Il s'agit du projet synthèse de mon cours de Jeu IV. Le jeu fait objet de génération semi-procédurale dans un univers en deux dimensions.",
         "tech": [
-            "allo",
-            "ui",
-            "salut fred"
+            "Unity 2D",
+            "C#",
+            "Github"
         ],
         "images": [
             "maphoto.png"
@@ -29,13 +31,12 @@
     },
     {
         "id": 2,
-        "nom": "SuperTroll",
-        "cours": "Jeux Vidéo",
-        "resume": "lorem",
+        "nom": "Agrotourisme Laurentides",
+        "cours": "Web",
+        "resume": "Un projet du cours d'élément d'intéractivité, un cours d'ergonomie. Le devis est très stricte et simule le marché du travail.",
         "tech": [
-            "allo",
-            "ui",
-            "hahahahahhahahahah"
+            "Axure RP 9",
+            "Illustrator"
         ],
         "images": [
             "maphoto.png"

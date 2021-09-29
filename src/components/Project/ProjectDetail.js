@@ -5,7 +5,7 @@ import LinkWithIcon from "../Link/LinkWithIcon";
 import { Card } from "../Card/Card";
 import { colors } from "../Colors/Colors";
 import { SideMenu } from "../AppBar/SideMenu";
-import { Body1, DoubleListItem, ListItem, TypoH1 } from "../Typo/Typo";
+import { Body1, DoubleListItem, ListItem, TypoH1, TypoH3 } from "../Typo/Typo";
 import { useParams } from "react-router";
 
 const ProjectDetail = ({
@@ -25,28 +25,31 @@ const ProjectDetail = ({
   return (
     <SideMenu className={detail ? "detail detail-open" : "detail"}>
       <Bar primary>
-        <Column size={1}>
+        <Column>
           <LinkWithIcon
             icon="fas fa-times"
             to="/portfolio"
             onClick={() => handleDetail()}
           />
         </Column>
-        <Column size={5} justify="space-between" pdr="2em">
-          <TypoH1>{nom}</TypoH1>
+        <Column size={1} justify="space-between" pdr="2em">
+          <TypoH3>{nom}</TypoH3>
           <Column>
             <LinkWithIcon
               icon="fas fa-arrow-left"
               to="#"
+              pd="0"
+              margin="0 0 0 0.5em"
               disabled={id <= 0}
               onClick={() => prevProject(id)}
             />
-            <TypoH1>
-              {id + 1} / {projects.length}
-            </TypoH1>
+            <TypoH3>
+              {id + 1}/{projects.length}
+            </TypoH3>
             <LinkWithIcon
               icon="fas fa-arrow-right"
               to="#"
+              pd="0"
               disabled={id === projects.length - 1}
               onClick={() => nextProject(id)}
             />
@@ -62,9 +65,13 @@ const ProjectDetail = ({
             </DoubleListItem>
             <TypoH1 color={colors.secondary}>Résumé :</TypoH1>
             <Body1 color={colors.dark}>{resume}</Body1>
-            <TypoH1 color={colors.secondary}>Logiciels et technologies utilisées :</TypoH1>
+            <TypoH1 color={colors.secondary}>
+              Logiciels et technologies utilisées :
+            </TypoH1>
             {tech.map((value) => (
-              <ListItem color={colors.dark}>{value}</ListItem>
+              <ListItem key={value} color={colors.dark}>
+                {value}
+              </ListItem>
             ))}
           </Card>
         </Column>

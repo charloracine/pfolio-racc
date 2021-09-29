@@ -10,6 +10,9 @@ const pulseAnimation = keyframes`
 export const LinkIcon = styled(Link)`
   border-radius: 5em;
   border-radius: ${(props) => props.br};
+  display: flex;
+  align-items: center;
+  text-decoration: none;
   cursor: pointer;
   overflow: hidden;
   &:focus {

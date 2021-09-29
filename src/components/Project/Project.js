@@ -27,7 +27,9 @@ const Project = ({ id, nom, cours, resume, tech, image, detail }) => {
       </Column>
       <TypoH2 color="currentColor">Résumé</TypoH2>
       <Body1 color={colors.dark}>{resume}</Body1>
-      <TypoH2 color="currentColor">Logiciels et technologies</TypoH2>
+      <TypoH2 margin="0 0 0.5em" color="currentColor">
+        Logiciels et technologies
+      </TypoH2>
       {tech.map((value) => (
         <ListItem key={value} color={colors.dark}>
           {value}

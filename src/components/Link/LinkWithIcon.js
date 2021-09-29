@@ -12,9 +12,16 @@ const LinkWithIcon = ({
   target,
   border,
   disabled,
+  margin,
 }) => {
   return (
-    <LinkIcon to={to} onClick={onClick} br={br} target={target} disabled={disabled}>
+    <LinkIcon
+      to={to}
+      onClick={onClick}
+      br={br}
+      target={target}
+      disabled={disabled}
+    >
       <Icon
         className={icon}
         fontSize={fontSize}
@@ -23,6 +30,7 @@ const LinkWithIcon = ({
         color={color}
         border={border}
         disabled={disabled}
+        margin={margin}
       />
     </LinkIcon>
   );

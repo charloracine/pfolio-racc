@@ -27,14 +27,14 @@ const AppBar = () => {
     <>
       <SideMenu className={sidemenu ? "" : "closed"}>
         <Bar primary>
-          <Column size={1}>
+          <Column>
             <LinkWithIcon
               icon="fas fa-times"
               to="#"
               onClick={() => handleMenu()}
             />
           </Column>
-          <Column size={5} justify="space-between" pdr="2em">
+          <Column size={1} justify="space-between" pdr="2em">
             <TypoH1>Vos accès</TypoH1>
           </Column>
         </Bar>
@@ -99,14 +99,14 @@ const AppBar = () => {
         </Container>
       </SideMenu>
       <Bar>
-        <Column size={1}>
+        <Column>
           <LinkWithIcon
             icon="fas fa-bars"
             to="#"
             onClick={() => handleMenu()}
           />
         </Column>
-        <Column size={5} justify="space-between" pdr="2em">
+        <Column size={1} justify="space-between" pdr="2em">
           <TypoH1>Charles-Olivier Racine</TypoH1>
         </Column>
       </Bar>
