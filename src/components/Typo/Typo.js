@@ -8,6 +8,14 @@ export const TypoError = styled.p`
   color: ${colors.secondary};
 `;
 
+export const TypoHeading = styled.h1`
+  font-weight: 700;
+  font-size: 4rem;
+  margin: 0.5em 0 0.25em;
+  color: ${colors.white};
+  color: ${(props) => props.color};
+`;
+
 export const TypoH1 = styled.h1`
   font-weight: 700;
   line-height: 1.5rem;
@@ -33,6 +41,9 @@ export const TypoH3 = styled.h1`
   white-space: nowrap;
   color: ${colors.white};
   color: ${(props) => props.color};
+  @media ${device.laptop} {
+    font-size: 1.5rem;
+  }
 `;
 export const TypoH2 = styled.h1`
   font-weight: 500;
@@ -46,7 +57,6 @@ export const TypoH2 = styled.h1`
 
 export const Body1 = styled.p`
   font-weight: 300;
-  text-align: justify;
   font-size: 1rem;
   text-indent: 1em;
   margin: 0.5em 0 1em 0;

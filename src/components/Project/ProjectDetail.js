@@ -24,41 +24,43 @@ const ProjectDetail = ({
   const { id, nom, cours, resume, tech } = myProject;
   return (
     <SideMenu className={detail ? "detail detail-open" : "detail"}>
-      <Bar primary>
-        <Column>
-          <LinkWithIcon
-            icon="fas fa-times"
-            to="/portfolio"
-            onClick={() => handleDetail()}
-          />
-        </Column>
-        <Column size={1} justify="space-between" pdr="2em">
-          <TypoH3>{nom}</TypoH3>
+      <Bar primary className="detail">
+        <Column size="1" justify="space-between" className="desktop">
           <Column>
             <LinkWithIcon
-              icon="fas fa-arrow-left"
-              to="#"
-              pd="0"
-              margin="0 0 0 0.5em"
-              disabled={id <= 0}
-              onClick={() => prevProject(id)}
+              icon="fas fa-times"
+              to="/portfolio"
+              onClick={() => handleDetail()}
             />
-            <TypoH3>
-              {id + 1}/{projects.length}
-            </TypoH3>
-            <LinkWithIcon
-              icon="fas fa-arrow-right"
-              to="#"
-              pd="0"
-              disabled={id === projects.length - 1}
-              onClick={() => nextProject(id)}
-            />
+          </Column>
+          <Column size={1} justify="space-between" pdr="2em">
+            <TypoH3>{nom}</TypoH3>
+            <Column>
+              <LinkWithIcon
+                icon="fas fa-arrow-left"
+                to="#"
+                pd="0"
+                margin="0 0 0 0.5em"
+                disabled={id <= 0}
+                onClick={() => prevProject(id)}
+              />
+              <TypoH3>
+                {id + 1}/{projects.length}
+              </TypoH3>
+              <LinkWithIcon
+                icon="fas fa-arrow-right"
+                to="#"
+                pd="0"
+                disabled={id === projects.length - 1}
+                onClick={() => nextProject(id)}
+              />
+            </Column>
           </Column>
         </Column>
       </Bar>
       <Container pdt="2em" pdl="0">
         <Column width="100vw">
-          <Card justify="flex-start" pd="2em 1em">
+          <Card justify="flex-start" pd="2em 1em" className="detail">
             <DoubleListItem>
               <TypoH1 color={colors.secondary}>Cours :</TypoH1>
               <TypoH1 color={colors.dark}>{cours}</TypoH1>

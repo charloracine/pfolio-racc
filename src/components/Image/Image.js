@@ -12,6 +12,10 @@ export const StackedImage = styled(Column)`
   padding: ${(props) => props.pd};
   width: ${(props) => props.width};
   height: ${(props) => props.width};
+  &.desktop {
+    height: 35em;
+    width: 35em;
+  }
   & > img {
     width: 80%;
     height: auto;

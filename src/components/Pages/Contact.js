@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Column, Container } from "../Container/Container";
 import LinkWithIcon from "../Link/LinkWithIcon";
 import { Body1, TypoH1, TypoH2 } from "../Typo/Typo";
@@ -6,8 +6,18 @@ import { Card } from "../Card/Card";
 import { colors } from "../Colors/Colors";
 import { ButtonGroup, Button } from "../Button/Button";
 import { useHistory } from "react-router";
+import { size } from "../Device/Device";
 const Contact = () => {
   const { push } = useHistory();
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+      // console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
+    }
+    window.addEventListener("resize", handleResize);
+  });
+
   const showCv = () => {
     window.open(
       `https://drive.google.com/file/d/1KLg6nmqIXaMoQAMnJQlo0RoOSIZDAKDA/view?usp=sharing`,
@@ -17,12 +27,22 @@ const Contact = () => {
 
   return (
     <Container dir="column" size={1} pd={0} pdt="1em">
-      <Column size="1" dir="column">
+      <Column size="1" dir="column" className="content">
         <TypoH1>CONTACTER</TypoH1>
-        <Card>
+        <Card
+          color={
+            width < parseInt(size.laptopL) ? colors.halfwhite : "transparent"
+          }
+        >
           <Column dir="column">
             <TypoH2 color={colors.primary}>Adresse électronique</TypoH2>
-            <Body1 color={colors.dark}>charles-o.racine@outlook.fr</Body1>
+            <Body1
+              color={
+                width < parseInt(size.laptopL) ? colors.dark : colors.white
+              }
+            >
+              charles-o.racine@outlook.fr
+            </Body1>
           </Column>
           <Column dir="column">
             <TypoH2 color={colors.primary}>Réseaux sociaux</TypoH2>

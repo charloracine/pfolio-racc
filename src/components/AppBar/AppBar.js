@@ -35,7 +35,7 @@ const AppBar = () => {
 
   return (
     <>
-      {width < parseInt(size.laptop) ? (
+      {width < parseInt(size.laptop) && (
         <SideMenu className={sidemenu ? "sidemenu" : "sidemenu closed"}>
           <Bar primary>
             <Column>
@@ -109,10 +109,8 @@ const AppBar = () => {
             </Column>
           </Container>
         </SideMenu>
-      ) : (
-        "allo"
       )}
-      <Bar>
+      <Bar className="main-bar">
         {width < parseInt(size.laptop) ? (
           <>
             <Column>

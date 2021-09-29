@@ -8,10 +8,12 @@ export const Bar = styled.header`
   top: 0;
   display: flex;
   align-items: center;
-  z-index: 100;
+  z-index: 10;
   width: 100%;
-  border-top: 1em solid
-    ${(props) => (props.primary ? colors.ds : colors.dp)};
+  border-top: 1em solid ${(props) => (props.primary ? colors.ds : colors.dp)};
   background-color: ${(props) =>
-    props.primary ? colors.secondary : colors.primary};
+  props.primary ? colors.secondary : colors.primary};
+  &.main-bar{
+    z-index: 5;
+  }
 `;

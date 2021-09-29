@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import device from "../Device/Device";
 
 export const Container = styled.div`
   display: flex;
@@ -10,14 +11,22 @@ export const Container = styled.div`
   padding-left: ${(props) => props.pdl};
   padding-top: ${(props) => props.pdt};
   padding-bottom: ${(props) => props.pdb};
+  max-width: 1024px;
+  @media ${device.laptop} {
+    min-width: 940px;
+  }
+  @media ${device.laptop} {
+    width: 1280px;
+  }
 `;
 
 export const Column = styled.div`
-  z-index: ${(props) => props.zIndex};
   flex: ${(props) => props.size};
+  order: ${(props) => props.order};
   position: ${(props) => props.position};
   width: ${(props) => props.width};
   margin: ${(props) => props.margin};
+  flex-wrap: ${(props) => props.wrap};
   display: flex;
   flex-direction: ${(props) => props.dir};
   justify-content: ${(props) => props.justify};
@@ -27,4 +36,12 @@ export const Column = styled.div`
   padding-left: ${(props) => props.pdl};
   padding-top: ${(props) => props.pdt};
   padding-bottom: ${(props) => props.pdb};
+  &.content {
+    z-index: 4;
+  }
+  &.desktop {
+    @media ${device.laptop} {
+      max-width: 835px;
+    }
+  }
 `;

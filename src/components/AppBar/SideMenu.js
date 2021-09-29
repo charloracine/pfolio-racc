@@ -12,7 +12,7 @@ export const SideMenu = styled(Column)`
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-  z-index: 11111;
+  z-index: 10;
   top: 0;
   left: 0;
   background-color: rgba(20, 20, 20, 0.5);

@@ -1,12 +1,6 @@
 import { Link } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { colors } from "../Colors/Colors";
-
-const pulseAnimation = keyframes`
- to {
-    background: rgba(20,20,20,0.3);
-  }
-`;
 
 export const LinkIcon = styled(Link)`
   border-radius: 5em;
@@ -16,14 +10,12 @@ export const LinkIcon = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   overflow: hidden;
-  &:focus {
-    animation: ${pulseAnimation} 500ms linear;
-  }
 `;
 
 export const StyledLink = styled(Link)`
   background-color: transparent;
   text-decoration: none;
+  z-index: 30;
   font-size: 2rem;
   white-space: nowrap;
   padding-right: 1em;

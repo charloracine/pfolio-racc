@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../Colors/Colors";
+import device from "../Device/Device";
 
 export const Card = styled.div`
   background-color: ${colors.halfwhite};
@@ -15,4 +16,16 @@ export const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   justify-content: ${(props) => props.justify};
+  @media ${device.laptop} {
+    max-width: 450px;
+    &.detail{
+      max-width: 800px;
+    }
+  }
+  @media ${device.laptopL} {
+    min-width: 450px;
+    &.detail{
+      min-width: 800px;
+    }
+  }
 `;
