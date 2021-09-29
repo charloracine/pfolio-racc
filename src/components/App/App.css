@@ -6,6 +6,10 @@
   --light-blue: rgb(0, 194, 255);
 }
 
+html {
+  overflow-y: scroll;
+}
+
 * {
   z-index: 10;
 }
@@ -23,4 +27,20 @@ button,
 select,
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #297051;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff6333;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 99, 51, 0.712)
 }
