@@ -27,7 +27,7 @@ const About = () => {
           }
         >
           <Column dir="column">
-            <TypoH2 color={colors.primary}>Titre de l'enonce</TypoH2>
+            <TypoH2 color={colors.primary}>Titre de l'énoncé</TypoH2>
             <Body1
               color={
                 width < parseInt(size.laptopL) ? colors.dark : colors.white
@@ -40,7 +40,7 @@ const About = () => {
             </Body1>
           </Column>
           <Column dir="column" pdt="0.5em">
-            <TypoH2 color={colors.primary}>Titre de l'enonce</TypoH2>
+            <TypoH2 color={colors.primary}>Titre de l'énoncé</TypoH2>
             <Body1
               color={
                 width < parseInt(size.laptopL) ? colors.dark : colors.white

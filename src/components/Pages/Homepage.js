@@ -60,8 +60,8 @@ const Homepage = () => {
                 width >= parseInt(size.laptop) ? colors.white : colors.dark
               }
             >
-              Je suis étudiant finissant en Techniques d’intégration multimédia,
-              profil logique. Mention DEC+ Ultra.
+              Je suis étudiant-finissant en Techniques d’intégration multimédia,
+              profil logique. Mention DEC+ Ultra. (Site-web en développement.)
             </Body1>
           </Column>
           <Column dir="column" pd="1em 0">
