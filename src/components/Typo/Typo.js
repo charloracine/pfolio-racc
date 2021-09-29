@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { colors } from "../Colors/Colors";
+import device from "../Device/Device";
 
 export const TypoError = styled.p`
   font-size: 0.5rem;
@@ -14,6 +15,14 @@ export const TypoH1 = styled.h1`
   margin: ${(props) => props.margin};
   color: ${colors.white};
   color: ${(props) => props.color};
+  & > a {
+    text-decoration: none;
+    color: currentColor;
+    white-space: nowrap;
+  }
+  @media ${device.laptop} {
+    font-size: 1.5rem;
+  }
 `;
 export const TypoH3 = styled.h1`
   font-weight: 500;
