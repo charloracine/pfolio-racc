@@ -7,6 +7,7 @@ import { colors } from "../Colors/Colors";
 import { SideMenu } from "../AppBar/SideMenu";
 import { Body1, ListItem, TypoH1, TypoH3 } from "../Typo/Typo";
 import { useParams } from "react-router";
+import { Carousel } from "react-responsive-carousel";
 
 const ProjectDetail = ({
   handleDetail,
@@ -21,7 +22,8 @@ const ProjectDetail = ({
     ({ id: projectId }) => projectId === parseInt(project)
   );
 
-  const { id, nom, cours, resume, tech } = myProject;
+  const { id, nom, cours, resume, tech, images } = myProject;
+
   return (
     <SideMenu className={detail ? "detail detail-open" : "detail"}>
       <Bar className="detail">
@@ -62,19 +64,40 @@ const ProjectDetail = ({
       </Bar>
       <Container pdt="2em" pdl="0">
         <Column width="100vw">
-          <Card justify="flex-start" pd="2em 1em" className="detail">
-            <TypoH1 color={colors.primary}>Cours :</TypoH1>
-            <Body1 color={colors.dark}>{cours}</Body1>
-            <TypoH1 color={colors.primary}>Résumé :</TypoH1>
-            <Body1 color={colors.dark}>{resume}</Body1>
-            <TypoH1 color={colors.primary}>
-              Logiciels et technologies utilisées :
-            </TypoH1>
-            {tech.map((value) => (
-              <ListItem key={value} color={colors.dark}>
-                {value}
-              </ListItem>
-            ))}
+          <Card
+            justify="flex-start"
+            pd="4em 0.5em"
+            className="detail"
+            overflowY="scroll"
+          >
+            <Column>
+              <Carousel color="black">
+                {images.map(({ file, name }) => (
+                  <div>
+                    <img
+                      src={`/images/${file}`}
+                      alt={name}
+                      style={{ maxHeight: "350px", objectFit: "contain" }}
+                    />
+                    <p className="legend">{name}</p>
+                  </div>
+                ))}
+              </Carousel>
+            </Column>
+            <Column dir="column" size="1">
+              <TypoH1 color={colors.primary}>Cours :</TypoH1>
+              <Body1 color={colors.dark}>{cours}</Body1>
+              <TypoH1 color={colors.primary}>Résumé :</TypoH1>
+              <Body1 color={colors.dark}>{resume}</Body1>
+              <TypoH1 color={colors.primary}>
+                Logiciels et technologies utilisées :
+              </TypoH1>
+              {tech.map((value) => (
+                <ListItem key={value} color={colors.dark}>
+                  {value}
+                </ListItem>
+              ))}
+            </Column>
           </Card>
         </Column>
       </Container>

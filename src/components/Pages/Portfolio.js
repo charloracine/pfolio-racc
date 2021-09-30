@@ -5,6 +5,7 @@ import Project from "../Project/Project";
 import ProjectDetail from "../Project/ProjectDetail";
 import { useRouteMatch, Route, useHistory } from "react-router-dom";
 import { size } from "../Device/Device";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Portfolio = ({ projects }) => {
   const [detail, setDetail] = useState(false);

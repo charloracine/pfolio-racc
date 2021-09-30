@@ -6,6 +6,7 @@ export const Card = styled.div`
   background-color: ${colors.halfwhite};
   background-color: ${(props) => props.color};
   color: ${(props) => props.textColor};
+  overflow-y: ${(props) => props.overflowY};
   flex: 1;
   box-shadow: 2px 2px 2px currentColor;
   padding: 1em;
@@ -18,13 +19,13 @@ export const Card = styled.div`
   justify-content: ${(props) => props.justify};
   @media ${device.laptop} {
     max-width: 450px;
-    &.detail{
+    &.detail {
       max-width: 800px;
     }
   }
   @media ${device.laptopL} {
     min-width: 450px;
-    &.detail{
+    &.detail {
       min-width: 800px;
     }
   }

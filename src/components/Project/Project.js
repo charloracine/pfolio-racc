@@ -19,8 +19,6 @@ const Project = ({ id, nom, cours, resume, tech, images, detail }) => {
     window.addEventListener("resize", handleResize);
   });
 
-  console.log(images);
-
   return (
     <Card
       margin={width < size.laptop ? "0 0 1em 0" : "0 1.5em 1.5em 0"}
@@ -31,7 +29,7 @@ const Project = ({ id, nom, cours, resume, tech, images, detail }) => {
           <TypoH2 color="currentColor">{nom}</TypoH2>
           <TypoH2 color={colors.dark}>{cours}</TypoH2>
         </DoubleListItem>
-        <Column justify="center" size="1">
+        <Column justify="center">
           <img
             src={`/images/${images[0].file}`}
             alt={images[0].name}
