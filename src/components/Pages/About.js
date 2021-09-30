@@ -30,29 +30,23 @@ const About = ({ endroit, setEndroit }) => {
           }
         >
           <Column dir="column">
-            <TypoH2 color={colors.primary}>Titre de l'énoncé</TypoH2>
+            <TypoH2 color={colors.primary}>Ce que je suis...</TypoH2>
             <Body1
               color={
                 width < parseInt(size.laptopL) ? colors.dark : colors.white
               }
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-              quo alias obcaecati unde, amet nemo neque nobis dignissimos quae
-              odio tempora id, autem nam laboriosam pariatur asperiores quod
-              aliquid nisi.
+              Jeune avec beaucoup de potentiel. Hyper polyvalent, j'adore apprendre et acquérir de l'expérience. La résolution de problème c'est mon « flow ». Je suis quelqu'un de fiable, optimiste et assidu. Je ne laisse tomber personne.
             </Body1>
           </Column>
           <Column dir="column" pdt="0.5em">
-            <TypoH2 color={colors.primary}>Titre de l'énoncé</TypoH2>
+            <TypoH2 color={colors.primary}>Ce que je veux...</TypoH2>
             <Body1
               color={
                 width < parseInt(size.laptopL) ? colors.dark : colors.white
               }
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-              quo alias obcaecati unde, amet nemo neque nobis dignissimos quae
-              odio tempora id, autem nam laboriosam pariatur asperiores quod
-              aliquid nisi.
+              Une équipe avec laquelle je pourrais partager de belles valeurs. Un emploi flexible, un milieu en pleine croissance. Le juste équilibre entre la vie et le travail.
             </Body1>
           </Column>
           <ButtonGroup>

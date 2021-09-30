@@ -71,8 +71,7 @@ const ProjectDetail = ({
             overflowY="scroll"
           >
             <Column>
-              {/* DOIT REVENIR A 0 LORSQUE CAHNGE PROJET, OVERFFLOW X EN MOBILE*/}
-              <Carousel color="black" showThumbs={false}>
+              <Carousel color="black" showThumbs={false} infiniteLoop={true}>
                 {images.map(({ file, name }) => (
                   <div>
                     <img

@@ -44,7 +44,7 @@
         "id": 1,
         "nom": "Plantager",
         "cours": "Web",
-        "resume": "Simulation d'une plateforme d'échange et de vente de culture agricoles. Création d'un profil utilisateur, gestion d'un potager et de ses plants. Gestion de vente et échange entre utilisateur.",
+        "resume": "Simulation d'une plateforme d'échange et de vente de culture agricoles. Création d'un profil utilisateur, gestion d'un potager et de ses plants. Gestion de vente et échange entre utilisateurs.",
         "tech": [
             "Laravel",
             "JavaScript",
@@ -160,7 +160,7 @@
         "id": 4,
         "nom": "Agrotourisme",
         "cours": "Web",
-        "resume": "Un projet du cours d'élément d'intéractivité, un cours d'ergonomie. Le devis est très stricte et simule le marché du travail.",
+        "resume": "Un projet du cours d'élément d'interactivité, un cours d'ergonomie. Le devis est très strict et simule le marché du travail.",
         "tech": [
             "Axure RP 9",
             "Illustrator"
@@ -198,7 +198,7 @@
         "id": 5,
         "nom": "Jello Veto",
         "cours": "Web",
-        "resume": "Premier « one page » concrêt en HTML 5 & CSS 3 pour le cours de Web 2. (Première année)",
+        "resume": "Ma première fierté en HTML 5 & CSS 3 pour le cours de Web 2. (Première année)",
         "tech": [
             "HTML 5",
             "CSS 3"
