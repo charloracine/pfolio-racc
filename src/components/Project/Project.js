@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "../Card/Card";
-import { StackedImage } from "../Image/Image";
 import { Body1, DoubleListItem, ListItem, TypoH2 } from "../Typo/Typo";
 import { colors } from "../Colors/Colors";
 import { Button } from "../Button/Button";
