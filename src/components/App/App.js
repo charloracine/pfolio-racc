@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { Container } from "../Container/Container";
 import "./App.css";
 import "@fontsource/roboto";
+import "@fontsource/merriweather";
+import "@fontsource/work-sans";
+
 import AppBar from "../AppBar/AppBar";
 import Homepage from "../Pages/Homepage";
 import Portfolio from "../Pages/Portfolio";
@@ -12,6 +15,7 @@ import Contact from "../Pages/Contact";
 import { Column } from "../Container/Container";
 import { StackedImage } from "../Image/Image";
 import { size } from "../Device/Device";
+import { colors } from "../Colors/Colors";
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -25,49 +29,27 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App" style={{ backgroundColor: "white" }}>
         <AppBar />
-        {width >= parseInt(size.laptop) ? (
-          <Column size="1" justify="flex-end">
-            <Column
-              justify="center"
-              size="1"
-              position="fixed"
-              pdt="5em"
-              pdr="2em"
-            >
-              <StackedImage pd="1em 0" className="desktop">
-                <img
-                  src="/images/Logo.svg"
-                  alt="Mon logo à moi"
-                  className="logo"
-                />
-                <img
-                  src="/images/maphoto.png"
-                  alt="Moi sur une roche"
-                  className="moi desktop"
-                />
-              </StackedImage>
-            </Column>
+        <Column size="1" justify="flex-end">
+          <Column size="1" overflow="hidden">
+            <img
+              src={
+                width >= parseInt(size.mobileL)
+                  ? "/images/desktop1920.jpg"
+                  : "/images/mobileme.png"
+              }
+              alt="Mon logo à moi"
+              style={{
+                position: "fixed",
+                top: "0",
+                left: "0",
+                height: "100vh",
+                overflow: "hidden",
+              }}
+            />
           </Column>
-        ) : (
-          <Column justify="center">
-            <Column justify="center" position="fixed" zIndex="0" pdt="8em">
-              <StackedImage pd="1em 0">
-                <img
-                  src="/images/Logo.svg"
-                  alt="Mon logo à moi"
-                  className="logo"
-                />
-                <img
-                  src="/images/maphoto.png"
-                  alt="Moi sur une roche"
-                  className="moi"
-                />
-              </StackedImage>
-            </Column>
-          </Column>
-        )}
+        </Column>
         <Column justify="center">
           <Container pdt="4em" justify="flex-start" className="content">
             <Switch>

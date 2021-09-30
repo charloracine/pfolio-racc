@@ -11,12 +11,16 @@ export const Container = styled.div`
   padding-left: ${(props) => props.pdl};
   padding-top: ${(props) => props.pdt};
   padding-bottom: ${(props) => props.pdb};
-  max-width: 1024px;
+  max-width: 935px;
   @media ${device.laptop} {
     min-width: 940px;
   }
   @media ${device.laptop} {
-    width: 1280px;
+    max-width: 935px;
+  }
+  @media ${device.laptopL} {
+    min-width: 1450px;
+    max-width: 1450px;
   }
 `;
 
@@ -27,6 +31,7 @@ export const Column = styled.div`
   width: ${(props) => props.width};
   margin: ${(props) => props.margin};
   flex-wrap: ${(props) => props.wrap};
+  overflow: ${(props) => props.overflow};
   display: flex;
   flex-direction: ${(props) => props.dir};
   justify-content: ${(props) => props.justify};
@@ -42,6 +47,15 @@ export const Column = styled.div`
   &.desktop {
     @media ${device.laptop} {
       max-width: 835px;
+    }
+  }
+  &.main-bar {
+    margin: 0 auto;
+    @media ${device.laptop} {
+      max-width: 935px;
+    }
+    @media ${device.laptopL} {
+      max-width: 1500px;
     }
   }
 `;

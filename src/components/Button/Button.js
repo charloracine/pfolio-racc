@@ -29,7 +29,8 @@ export const Button = styled.button`
   border: 3px solid transparent;
   border-radius: 10px;
   flex: ${(props) => props.size};
-  font-size: 1rem;
+  font-size: 15px;
+  letter-spacing: 1px;
   font-size: ${(props) => props.fontSize};
   font-weight: 700;
   font-weight: ${(props) => props.fontWeight};

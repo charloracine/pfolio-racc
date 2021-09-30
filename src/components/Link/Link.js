@@ -33,23 +33,25 @@ export const StyledLink = styled(Link)`
     border: none;
     font-weight: 700;
     padding: 0;
-    margin: 0 0.5em;
+    margin: 0 10px;
     display: block;
     position: relative;
     &::after {
       content: "";
       background: ${colors.dp};
       mix-blend-mode: color;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
       width: calc(100% + 20px);
-      box-shadow: 2px 2px 2px ${colors.dark};
       height: 0;
       position: absolute;
-      top: -12px;
+      top: -22px;
       left: -10px;
       transition: all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
-    &:hover::after {
-      height: calc(100% + 16px);
+    &:hover::after,
+    &.selected::after {
+      height: calc(100% + 34px);
     }
   }
 `;

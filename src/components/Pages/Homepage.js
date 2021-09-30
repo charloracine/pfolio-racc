@@ -19,13 +19,8 @@ const Homepage = () => {
   });
 
   return (
-    <Container
-      dir={width < parseInt(size.laptop) ? "column" : "row"}
-      size={1}
-      pd={0}
-      pdt="1em"
-    >
-      <Column size="1" dir="column">
+    <Container dir="column" size={1} pd={0} pdt="1em" pdl="1.5em">
+      <Column size="1" dir="column" className="content">
         <TypoH1>DEVELOPPEUR WEB FULL STACK</TypoH1>
         {width < parseInt(size.laptop) && (
           <Column justify="center">
@@ -44,7 +39,9 @@ const Homepage = () => {
           </Column>
         )}
         <Card
-          color={width >= parseInt(size.laptop) ? "transparent" : colors.halfwhite}
+          color={
+            width >= parseInt(size.laptop) ? "transparent" : colors.halfwhite
+          }
           pd={width >= parseInt(size.laptop) && "0 1em 0 0"}
         >
           <Column dir="column" size="1">
@@ -61,8 +58,9 @@ const Homepage = () => {
               }
             >
               Je suis étudiant-finissant en Techniques d’intégration multimédia,
-              profil logique. Mention DEC+ Ultra. (Site-web en développement.)
+              profil logique. Mention DEC+ Ultra.
             </Body1>
+            <Body1>(Portfolio en développement.)</Body1>
           </Column>
           <Column dir="column" pd="1em 0">
             <Button

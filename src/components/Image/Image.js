@@ -3,7 +3,6 @@ import { Column } from "../Container/Container";
 
 export const StackedImage = styled(Column)`
   position: relative;
-  background: url(/img/boite.png) center no-repeat;
   background-size: contain;
   justify-content: center;
   align-items: center;

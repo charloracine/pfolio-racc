@@ -9,7 +9,7 @@ export const TypoError = styled.p`
 `;
 
 export const TypoHeading = styled.h1`
-  font-weight: 700;
+  font-weight: 800;
   font-size: 4rem;
   margin: 0.5em 0 0.25em;
   color: ${colors.white};
@@ -17,7 +17,7 @@ export const TypoHeading = styled.h1`
 `;
 
 export const TypoH1 = styled.h1`
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.5rem;
   font-size: 1.2rem;
   margin: ${(props) => props.margin};
@@ -33,7 +33,7 @@ export const TypoH1 = styled.h1`
   }
 `;
 export const TypoH3 = styled.h1`
-  font-weight: 500;
+  font-weight: 800;
   line-height: 1.5rem;
   font-size: 1rem;
   text-overflow: ellipsis;
@@ -46,7 +46,7 @@ export const TypoH3 = styled.h1`
   }
 `;
 export const TypoH2 = styled.h1`
-  font-weight: 500;
+  font-weight: 800;
   line-height: 1.5rem;
   font-size: 1.2rem;
   margin: 0;
@@ -59,6 +59,7 @@ export const Body1 = styled.p`
   font-weight: 300;
   font-size: 1rem;
   text-indent: 1em;
+  font-family: "Merriweather", serif;
   margin: 0.5em 0 1em 0;
   color: ${colors.white};
   color: ${(props) => props.color};
@@ -66,6 +67,7 @@ export const Body1 = styled.p`
 export const ListItem = styled.li`
   font-weight: 300;
   list-style-type: none;
+  font-family: "Merriweather", serif;
   text-indent: 1em;
   padding: 0;
   margin: 0;

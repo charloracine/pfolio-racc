@@ -11,9 +11,8 @@ html {
 }
 
 .App {
-  background-color: #202020;
   min-height: 100vh;
-  font-family: "Roboto", sans-serif;
+  font-family: "Work Sans", sans-serif;
   height: 100%;
   margin: 0 auto;
 }

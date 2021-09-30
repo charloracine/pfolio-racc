@@ -9,9 +9,11 @@ import { SideMenu } from "./SideMenu";
 import { colors } from "../Colors/Colors";
 import { Button } from "../Button/Button";
 import { size } from "../Device/Device";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const AppBar = () => {
+  const { location } = useHistory();
+  const [path, setPath] = useState(location.pathname);
   const [sidemenu, setSidemenu] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -127,37 +129,42 @@ const AppBar = () => {
             </Column>
           </>
         ) : (
-          <Column size={1} dir="row">
-            <Column size={1} align="center" pdl="1.5em">
-              <StyledLink className="desktop" to="/homepage">
-                <img
-                  src="/images/Logo.svg"
-                  alt="mon logo"
-                  style={{ width: "1em", filter: "grayscale(1)" }}
-                />
+          <Column size={1} dir="row" className="main-bar">
+            <Column size={1} align="center">
+              <StyledLink
+                to="/homepage"
+                className={
+                  path === "/homepage" ? "desktop selected" : "desktop"
+                }
+                onClick={() => setPath("/homepage")}
+              >
+                Charles-Olivier Racine
               </StyledLink>
-              <TypoH1 margin="0 1em">
-                <Link to="/homepage">Charles-Olivier Racine</Link>
-              </TypoH1>
             </Column>
             <Column size={3} align="center" pdr="2em" justify="center">
-              <StyledLink className="desktop" to="/homepage">
-                Accueil
-              </StyledLink>
               <StyledLink
-                className="desktop"
+                className={
+                  path === "/portfolio" ? "desktop selected" : "desktop"
+                }
                 color={colors.white}
                 to="/portfolio"
+                onClick={() => setPath("/portfolio")}
               >
                 Portfolio
               </StyledLink>
-              <StyledLink className="desktop" color={colors.white} to="/about">
+              <StyledLink
+                className={path === "/about" ? "desktop selected" : "desktop"}
+                color={colors.white}
+                to="/about"
+                onClick={() => setPath("/about")}
+              >
                 À propos
               </StyledLink>
               <StyledLink
-                className="desktop"
+                className={path === "/contact" ? "desktop selected" : "desktop"}
                 color={colors.white}
                 to="/contact"
+                onClick={() => setPath("/contact")}
               >
                 Contacter
               </StyledLink>
