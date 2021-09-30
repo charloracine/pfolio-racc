@@ -57,7 +57,7 @@ const Portfolio = ({ projects }) => {
             dir={width < parseInt(size.laptopL) ? "column" : "row"}
             wrap="wrap"
           >
-            {projects.map(({ id, nom, cours, resume, tech, image }) => (
+            {projects.map(({ id, nom, cours, resume, tech, images }) => (
               <Project
                 key={id}
                 id={id}
@@ -65,7 +65,7 @@ const Portfolio = ({ projects }) => {
                 cours={cours}
                 resume={resume}
                 tech={tech}
-                image={image}
+                images={images}
                 detail={() => handleDetail()}
               />
             ))}

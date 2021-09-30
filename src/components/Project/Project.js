@@ -8,7 +8,7 @@ import { Column } from "../Container/Container";
 import { useRouteMatch, useHistory } from "react-router";
 import { size } from "../Device/Device";
 
-const Project = ({ id, nom, cours, resume, tech, image, detail }) => {
+const Project = ({ id, nom, cours, resume, tech, images, detail }) => {
   const { push } = useHistory();
   const { path } = useRouteMatch();
   const [width, setWidth] = useState(window.innerWidth);
@@ -19,6 +19,8 @@ const Project = ({ id, nom, cours, resume, tech, image, detail }) => {
     }
     window.addEventListener("resize", handleResize);
   });
+
+  console.log(images);
 
   return (
     <Card
@@ -31,9 +33,11 @@ const Project = ({ id, nom, cours, resume, tech, image, detail }) => {
           <TypoH2 color={colors.dark}>{cours}</TypoH2>
         </DoubleListItem>
         <Column justify="center">
-          <StackedImage>
-            <img src={image} alt="" className="moi" />
-          </StackedImage>
+          <img
+            src={`/images/${images[0].file}`}
+            alt={images[0].name}
+            style={{ maxWidth: "100%", margin: "0.5em 0" }}
+          />
         </Column>
         <TypoH2 color="currentColor">Résumé</TypoH2>
         <Body1 color={colors.dark}>{resume}</Body1>

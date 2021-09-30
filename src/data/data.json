@@ -9,14 +9,78 @@
             "JavaScript",
             "Styled Components",
             "HTML & SCSS",
-            "Git & Netlify"
+            "Git, Netlify & Figma"
         ],
         "images": [
-            "maphoto.png"
-        ]
+            {
+                "id": 0,
+                "name": "Accueil",
+                "file": "portfolio/pfolio-proto2.jpg"
+            },
+            {
+                "id": 1,
+                "name": "Premier prototype",
+                "file": "portfolio/pfolio-proto1.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Figma",
+                "file": "portfolio/pfolio-figma.jpg"
+            },
+            {
+                "id": 3,
+                "name": "« Mobile First »",
+                "file": "portfolio/pfolio-responsive.jpg"
+            },
+            {
+                "id": 4,
+                "name": "Styled Components",
+                "file": "portfolio/pfolio-styledcomp.jpg"
+            }
+        ],
+        "script": "Projet.js"
     },
     {
         "id": 1,
+        "nom": "Plantager",
+        "cours": "Web",
+        "resume": "Simulation d'une plateforme d'échange et de vente de culture agricoles. Création d'un profil utilisateur, gestion d'un potager et de ses plants. Gestion de vente et échange entre utilisateur.",
+        "tech": [
+            "Laravel",
+            "JavaScript",
+            "Github"
+        ],
+        "images": [
+            {
+                "id": 0,
+                "name": "La liste des potagers inscrits",
+                "file": "plantager/pl-list.jpg"
+            },
+            {
+                "id": 1,
+                "name": "La page de connexion de l'usager",
+                "file": "plantager/pl-co.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Le profil d'un usager",
+                "file": "plantager/pl-profil.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Les informations d'un usager",
+                "file": "plantager/pl-info.jpg"
+            },
+            {
+                "id": 4,
+                "name": "Ajouter un potager à son profil",
+                "file": "plantager/pl-add.jpg"
+            }
+        ],
+        "script": "TransactionEchangeController.php"
+    },
+    {
+        "id": 2,
         "nom": "SuperNova",
         "cours": "Jeux Vidéo",
         "resume": "Il s'agit du projet synthèse de mon cours de Jeu IV. Le jeu fait objet de génération semi-procédurale dans un univers en deux dimensions.",
@@ -26,11 +90,74 @@
             "Github"
         ],
         "images": [
-            "maphoto.png"
-        ]
+            {
+                "id": 0,
+                "name": "L'accueil du jeu",
+                "file": "supernova/sn-intro.jpg"
+            },
+            {
+                "id": 1,
+                "name": "La scène tutoriel",
+                "file": "supernova/sn-tuto.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Le premier niveau",
+                "file": "supernova/sn-lvl1.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Le second niveau",
+                "file": "supernova/sn-lvl2.jpg"
+            }
+        ],
+        "script": "GestCinema.cs"
     },
     {
-        "id": 2,
+        "id": 3,
+        "nom": "Plein Air Québec",
+        "cours": "Web",
+        "resume": "Une plateforme pour la recherche d'activité de plein air au Québec.",
+        "tech": [
+            "Axure RP 9",
+            "Illustrator"
+        ],
+        "images": [
+            {
+                "id": 0,
+                "name": "Page d'accueil",
+                "file": "plein-air/plein-accueil.jpg"
+            },
+            {
+                "id": 1,
+                "name": "Un article",
+                "file": "plein-air/plein-aussi.jpg"
+            },
+            {
+                "id": 2,
+                "name": "La section nautique",
+                "file": "plein-air/plein-naut.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Un article",
+                "file": "plein-air/plein-section.jpg"
+            },
+            {
+                "id": 4,
+                "name": "Un second article",
+                "file": "plein-air/plein-idee.jpg"
+            },
+            {
+                "id": 5,
+                "name": "Le footer",
+                "file": "plein-air/plein-footer.jpg"
+            }
+        ],
+        "script": null
+    },
+    {
+        "id": 4,
         "nom": "Agrotourisme Laurentides",
         "cours": "Web",
         "resume": "Un projet du cours d'élément d'intéractivité, un cours d'ergonomie. Le devis est très stricte et simule le marché du travail.",
@@ -39,7 +166,55 @@
             "Illustrator"
         ],
         "images": [
-            "maphoto.png"
-        ]
+            {
+                "id": 0,
+                "name": "Page d'accueil",
+                "file": "agrotourisme/agro-accueil.jpg"
+            },
+            {
+                "id": 1,
+                "name": "Un article",
+                "file": "agrotourisme/agro-section.jpg"
+            },
+            {
+                "id": 2,
+                "name": "La section restauration",
+                "file": "agrotourisme/agro-resto.jpg"
+            },
+            {
+                "id": 3,
+                "name": "La présentation de produit d'un client",
+                "file": "agrotourisme/agro-prez.jpg"
+            },
+            {
+                "id": 4,
+                "name": "La fiche d'un client",
+                "file": "agrotourisme/agro-client.jpg"
+            }
+        ],
+        "script": null
+    },
+    {
+        "id": 5,
+        "nom": "Jello Veto",
+        "cours": "Web",
+        "resume": "Premier « one page » concrêt en HTML 5 & CSS 3 pour le cours de Web 2. (Première année)",
+        "tech": [
+            "HTML 5",
+            "CSS 3"
+        ],
+        "images": [
+            {
+                "id": 0,
+                "name": "Page d'accueil",
+                "file": "jelloveto/jv-main-page.jpg"
+            },
+            {
+                "id": 1,
+                "name": "Liste des espèces",
+                "file": "jelloveto/jv-animals.jpg"
+            }
+        ],
+        "script": "jv-style.css"
     }
 ]

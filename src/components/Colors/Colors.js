@@ -7,7 +7,7 @@ export const colors = {
   ls: "#33cfff",
   comp: "#C12024",
   white: "white",
-  halfwhite: "rgba(255,255,255,0.9)",
+  halfwhite: "rgba(255,255,255,0.75)",
   dark: "#3D3D3D",
 };
 //v1
