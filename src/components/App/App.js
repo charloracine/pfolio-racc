@@ -13,9 +13,7 @@ import About from "../Pages/About";
 import projectData from "../../data/data.json";
 import Contact from "../Pages/Contact";
 import { Column } from "../Container/Container";
-import { StackedImage } from "../Image/Image";
 import { size } from "../Device/Device";
-import { colors } from "../Colors/Colors";
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -32,19 +30,20 @@ function App() {
       <div className="App" style={{ backgroundColor: "white" }}>
         <AppBar />
         <Column size="1" justify="flex-end">
-          <Column size="1" overflow="hidden">
+          <Column size="1" overflow="hidden" pd="0">
             <img
               src={
                 width >= parseInt(size.mobileL)
                   ? "/images/desktop1920.jpg"
                   : "/images/mobileme.png"
               }
-              alt="Mon logo à moi"
+              alt="C'est moi!"
               style={{
                 position: "fixed",
                 top: "0",
                 left: "0",
-                height: "100vh",
+                minHeight: "100vh",
+                minWidth: "100vw",
                 overflow: "hidden",
               }}
             />
