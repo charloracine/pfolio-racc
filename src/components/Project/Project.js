@@ -47,7 +47,7 @@ const Project = ({ id, nom, cours, resume, tech, image, detail }) => {
         ))}
       </Column>
       <Button
-        color={colors.secondary}
+        color="currentColor"
         margin="1em 0 0"
         outlined
         onClick={() => {

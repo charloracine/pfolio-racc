@@ -7,7 +7,7 @@ import { colors } from "../Colors/Colors";
 import { ButtonGroup, Button } from "../Button/Button";
 import { useHistory } from "react-router";
 import { size } from "../Device/Device";
-const Contact = () => {
+const Contact = ({ endroit, setEndroit }) => {
   const { push } = useHistory();
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -32,6 +32,9 @@ const Contact = () => {
         <Card
           color={
             width < parseInt(size.laptopL) ? colors.halfwhite : "transparent"
+          }
+          textColor={
+            width >= parseInt(size.laptop) ? colors.white : colors.dark
           }
         >
           <Column dir="column">
@@ -77,11 +80,21 @@ const Contact = () => {
               size="1"
               color={colors.comp}
               margin="0 0 0.5em 0"
-              onClick={() => push("/portfolio")}
+              onClick={() => {
+                push("/portfolio");
+                setEndroit("/portfolio");
+              }}
             >
               Portfolio
             </Button>
-            <Button size="1" outlined onClick={() => push("/about")}>
+            <Button
+              size="1"
+              outlined
+              onClick={() => {
+                push("/about");
+                setEndroit("/about");
+              }}
+            >
               À propos
             </Button>
           </ButtonGroup>

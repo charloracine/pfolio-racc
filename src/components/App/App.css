@@ -30,13 +30,13 @@ a {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #297051;
+  background: #168784;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ff6333;
+  background: #C12024;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 99, 51, 0.712);
+  background: #c1202394;
 }

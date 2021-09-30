@@ -5,7 +5,7 @@ import LinkWithIcon from "../Link/LinkWithIcon";
 import { Card } from "../Card/Card";
 import { colors } from "../Colors/Colors";
 import { SideMenu } from "../AppBar/SideMenu";
-import { Body1, DoubleListItem, ListItem, TypoH1, TypoH3 } from "../Typo/Typo";
+import { Body1, ListItem, TypoH1, TypoH3 } from "../Typo/Typo";
 import { useParams } from "react-router";
 
 const ProjectDetail = ({
@@ -24,7 +24,7 @@ const ProjectDetail = ({
   const { id, nom, cours, resume, tech } = myProject;
   return (
     <SideMenu className={detail ? "detail detail-open" : "detail"}>
-      <Bar primary className="detail">
+      <Bar className="detail">
         <Column size="1" justify="space-between" className="desktop">
           <Column>
             <LinkWithIcon
@@ -34,13 +34,15 @@ const ProjectDetail = ({
             />
           </Column>
           <Column size={1} justify="space-between" pdr="2em">
-            <TypoH3>{nom}</TypoH3>
+            <Column size="1">
+              <TypoH3>{nom}</TypoH3>
+            </Column>
             <Column>
               <LinkWithIcon
                 icon="fas fa-arrow-left"
                 to="#"
                 pd="0"
-                margin="0 0 0 0.5em"
+                margin="0 0.5em"
                 disabled={id <= 0}
                 onClick={() => prevProject(id)}
               />
@@ -50,7 +52,7 @@ const ProjectDetail = ({
               <LinkWithIcon
                 icon="fas fa-arrow-right"
                 to="#"
-                pd="0"
+                pd="0 0.5em"
                 disabled={id === projects.length - 1}
                 onClick={() => nextProject(id)}
               />
@@ -61,13 +63,11 @@ const ProjectDetail = ({
       <Container pdt="2em" pdl="0">
         <Column width="100vw">
           <Card justify="flex-start" pd="2em 1em" className="detail">
-            <DoubleListItem>
-              <TypoH1 color={colors.secondary}>Cours :</TypoH1>
-              <TypoH1 color={colors.dark}>{cours}</TypoH1>
-            </DoubleListItem>
-            <TypoH1 color={colors.secondary}>Résumé :</TypoH1>
+            <TypoH1 color={colors.primary}>Cours :</TypoH1>
+            <Body1 color={colors.dark}>{cours}</Body1>
+            <TypoH1 color={colors.primary}>Résumé :</TypoH1>
             <Body1 color={colors.dark}>{resume}</Body1>
-            <TypoH1 color={colors.secondary}>
+            <TypoH1 color={colors.primary}>
               Logiciels et technologies utilisées :
             </TypoH1>
             {tech.map((value) => (

@@ -9,11 +9,9 @@ import { SideMenu } from "./SideMenu";
 import { colors } from "../Colors/Colors";
 import { Button } from "../Button/Button";
 import { size } from "../Device/Device";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const AppBar = () => {
-  const { location } = useHistory();
-  const [path, setPath] = useState(location.pathname);
+const AppBar = ({ endroit, setEndroit }) => {
   const [sidemenu, setSidemenu] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -39,7 +37,7 @@ const AppBar = () => {
     <>
       {width < parseInt(size.laptop) && (
         <SideMenu className={sidemenu ? "sidemenu" : "sidemenu closed"}>
-          <Bar primary>
+          <Bar>
             <Column>
               <LinkWithIcon
                 icon="fas fa-times"
@@ -55,44 +53,46 @@ const AppBar = () => {
             <Column width="100vw">
               <Card justify="flex-start" pd="2em 1em">
                 <StyledLink
-                  color={colors.secondary}
+                  color={colors.primary}
                   to="/homepage"
-                  onClick={() => handleMenu()}
+                  onClick={() => {
+                    handleMenu();
+                    setEndroit("/homepage");
+                  }}
                 >
                   Accueil
                 </StyledLink>
                 <StyledLink
-                  color={colors.secondary}
+                  color={colors.primary}
                   to="/portfolio"
-                  onClick={() => handleMenu()}
+                  onClick={() => {
+                    handleMenu();
+                    setEndroit("/portfolio");
+                  }}
                 >
                   Portfolio
                 </StyledLink>
                 <StyledLink
-                  color={colors.secondary}
+                  color={colors.primary}
                   to="/about"
-                  onClick={() => handleMenu()}
+                  onClick={() => {
+                    handleMenu();
+                    setEndroit("/about");
+                  }}
                 >
                   À propos
                 </StyledLink>
                 <StyledLink
-                  color={colors.secondary}
+                  color={colors.primary}
                   to="/contact"
-                  onClick={() => handleMenu()}
+                  onClick={() => {
+                    handleMenu();
+                    setEndroit("/contact");
+                  }}
                 >
                   Contacter
                 </StyledLink>
                 <Column align="center" pdt="1em">
-                  <Button
-                    pd="0"
-                    fontSize="2rem"
-                    outlined
-                    color={colors.comp}
-                    margin="0 0.5em 0 0"
-                    onClick={() => showCv()}
-                  >
-                    cv
-                  </Button>
                   <LinkWithIcon
                     pd="3px 5px"
                     fontSize="2em"
@@ -106,6 +106,16 @@ const AppBar = () => {
                     }}
                     target="_blank"
                   />
+                  <Button
+                    pd="0"
+                    fontSize="2rem"
+                    outlined
+                    color={colors.comp}
+                    margin="0 0 0 0.5em"
+                    onClick={() => showCv()}
+                  >
+                    cv
+                  </Button>
                 </Column>
               </Card>
             </Column>
@@ -124,7 +134,9 @@ const AppBar = () => {
             </Column>
             <Column size={1} justify="space-between" pdr="2em">
               <TypoH1>
-                <Link to="/homepage">Charles-Olivier Racine</Link>
+                <Link to="/homepage" onClick={() => setEndroit("/homepage")}>
+                  Charles-Olivier Racine
+                </Link>
               </TypoH1>
             </Column>
           </>
@@ -134,9 +146,9 @@ const AppBar = () => {
               <StyledLink
                 to="/homepage"
                 className={
-                  path === "/homepage" ? "desktop selected" : "desktop"
+                  endroit === "/homepage" ? "desktop selected" : "desktop"
                 }
-                onClick={() => setPath("/homepage")}
+                onClick={() => setEndroit("/homepage")}
               >
                 Charles-Olivier Racine
               </StyledLink>
@@ -144,42 +156,36 @@ const AppBar = () => {
             <Column size={3} align="center" pdr="2em" justify="center">
               <StyledLink
                 className={
-                  path === "/portfolio" ? "desktop selected" : "desktop"
+                  endroit === "/portfolio" ? "desktop selected" : "desktop"
                 }
                 color={colors.white}
                 to="/portfolio"
-                onClick={() => setPath("/portfolio")}
+                onClick={() => setEndroit("/portfolio")}
               >
                 Portfolio
               </StyledLink>
               <StyledLink
-                className={path === "/about" ? "desktop selected" : "desktop"}
+                className={
+                  endroit === "/about" ? "desktop selected" : "desktop"
+                }
                 color={colors.white}
                 to="/about"
-                onClick={() => setPath("/about")}
+                onClick={() => setEndroit("/about")}
               >
                 À propos
               </StyledLink>
               <StyledLink
-                className={path === "/contact" ? "desktop selected" : "desktop"}
+                className={
+                  endroit === "/contact" ? "desktop selected" : "desktop"
+                }
                 color={colors.white}
                 to="/contact"
-                onClick={() => setPath("/contact")}
+                onClick={() => setEndroit("/contact")}
               >
                 Contacter
               </StyledLink>
             </Column>
             <Column size={1} pdr="2.5em" justify="flex-end">
-              <Button
-                pd="0"
-                fontSize="2rem"
-                outlined
-                color={colors.comp}
-                margin="0.5em 0.5em"
-                onClick={() => showCv()}
-              >
-                cv
-              </Button>
               <LinkWithIcon
                 pd="3px 5px"
                 fontSize="2em"
@@ -193,6 +199,16 @@ const AppBar = () => {
                 }}
                 target="_blank"
               />
+              <Button
+                pd="0"
+                fontSize="2rem"
+                outlined
+                color={colors.comp}
+                margin="0.5em 0.5em"
+                onClick={() => showCv()}
+              >
+                cv
+              </Button>
             </Column>
           </Column>
         )}

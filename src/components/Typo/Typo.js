@@ -60,7 +60,7 @@ export const Body1 = styled.p`
   font-size: 1rem;
   text-indent: 1em;
   font-family: "Merriweather", serif;
-  margin: 0.5em 0 1em 0;
+  margin: 0em 0 1em 0;
   color: ${colors.white};
   color: ${(props) => props.color};
 `;
