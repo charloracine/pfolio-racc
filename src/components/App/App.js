@@ -42,7 +42,8 @@ function App() {
               style={{
                 position: "fixed",
                 top: "0",
-                left: "0",
+                left: `${width > parseInt(size.laptopL) ? "0" : ""}`,
+                right: `${width <= parseInt(size.laptopL) ? "0" : ""}`,
                 minHeight: "100vh",
                 minWidth: "100vw",
                 overflow: "hidden",

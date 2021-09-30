@@ -31,11 +31,11 @@ const Project = ({ id, nom, cours, resume, tech, images, detail }) => {
           <TypoH2 color="currentColor">{nom}</TypoH2>
           <TypoH2 color={colors.dark}>{cours}</TypoH2>
         </DoubleListItem>
-        <Column justify="center">
+        <Column justify="center" size="1">
           <img
             src={`/images/${images[0].file}`}
             alt={images[0].name}
-            style={{ maxWidth: "100%", margin: "0.5em 0" }}
+            style={{ maxWidth: "100%", margin: "0.5em 0", objectFit: "contain" }}
           />
         </Column>
         <TypoH2 color="currentColor">Résumé</TypoH2>
