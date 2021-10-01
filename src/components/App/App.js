@@ -26,6 +26,12 @@ function App() {
     window.addEventListener("resize", handleResize);
   });
 
+  const src = () => {
+    if (width < parseInt(size.mobileL)) return "/images/mobileme.png";
+    else if (width > parseInt(size.laptopL)) return "/images/desktop1920.jpg";
+    else return "/images/laptopme.jpg";
+  };
+
   return (
     <BrowserRouter>
       <div className="App" style={{ backgroundColor: "white" }}>
@@ -33,11 +39,7 @@ function App() {
         <Column size="1" justify="flex-end">
           <Column size="1" overflow="hidden" pd="0">
             <img
-              src={
-                width >= parseInt(size.mobileL)
-                  ? "/images/desktop1920.jpg"
-                  : "/images/mobileme.png"
-              }
+              src={src()}
               alt="C'est moi!"
               style={{
                 position: "fixed",

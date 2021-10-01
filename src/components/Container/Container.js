@@ -19,8 +19,8 @@ export const Container = styled.div`
     max-width: 935px;
   }
   @media ${device.laptopL} {
-    min-width: 1450px;
-    max-width: 1450px;
+    min-width: 1400px;
+    max-width: 1400px;
   }
 `;
 
@@ -55,7 +55,7 @@ export const Column = styled.div`
       max-width: 935px;
     }
     @media ${device.laptopL} {
-      max-width: 1500px;
+      max-width: 1440px;
     }
   }
 `;
