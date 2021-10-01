@@ -47,6 +47,7 @@
         "resume": "Simulation d'une plateforme d'échange et de vente de culture agricoles. Création d'un profil utilisateur, gestion d'un potager et de ses plants. Gestion de vente et échange entre utilisateurs.",
         "tech": [
             "Laravel",
+            "PHP",
             "JavaScript",
             "Github"
         ],
