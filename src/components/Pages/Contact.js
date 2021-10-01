@@ -73,6 +73,19 @@ const Contact = ({ endroit, setEndroit }) => {
                 }}
                 target="_blank"
               />
+              <LinkWithIcon
+                margin="0 0 0 0.5em"
+                pd="3px 5px"
+                fontSize="2em"
+                br="10px"
+                icon="fab fa-github"
+                color={colors.primary}
+                border="3px solid currentColor"
+                to={{
+                  pathname: "https://github.com/charloracine",
+                }}
+                target="_blank"
+              />
             </Column>
           </Column>
           <ButtonGroup margin="1em 0 0">

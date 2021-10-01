@@ -106,6 +106,19 @@ const AppBar = ({ endroit, setEndroit }) => {
                     }}
                     target="_blank"
                   />
+                  <LinkWithIcon
+                    margin="0 0 0 0.5em"
+                    pd="3px 5px"
+                    fontSize="2em"
+                    br="10px"
+                    icon="fab fa-github"
+                    color={colors.primary}
+                    border="3px solid currentColor"
+                    to={{
+                      pathname: "https://github.com/charloracine",
+                    }}
+                    target="_blank"
+                  />
                   <Button
                     pd="0"
                     fontSize="2rem"
@@ -196,6 +209,19 @@ const AppBar = ({ endroit, setEndroit }) => {
                 to={{
                   pathname:
                     "https://ca.linkedin.com/in/charles-olivier-racine-815655178",
+                }}
+                target="_blank"
+              />
+              <LinkWithIcon
+                margin="0 0 0 0.5em"
+                pd="3px 5px"
+                fontSize="2em"
+                br="10px"
+                icon="fab fa-github"
+                color={colors.white}
+                border="3px solid currentColor"
+                to={{
+                  pathname: "https://github.com/charloracine",
                 }}
                 target="_blank"
               />
