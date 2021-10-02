@@ -112,7 +112,7 @@ const Contact = ({ endroit, setEndroit }) => {
             </Button>
           </ButtonGroup>
         </Card>
-        <Card
+        {/* <Card
           margin="1em 0"
           color={
             width < parseInt(size.laptopL) ? colors.halfwhite : "transparent"
@@ -154,7 +154,7 @@ const Contact = ({ endroit, setEndroit }) => {
               Send
             </Button>
           </form>
-        </Card>
+        </Card> */}
       </Column>
     </Container>
   );
