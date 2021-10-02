@@ -29,7 +29,7 @@ export const StyledSpan = styled.span`
   position: absolute;
   left: 5px;
   white-space: nowrap;
-  font-size: 1.4rem;
+  font-size: 1rem;
   padding: 0 0.5em;
   top: -15px;
   background-color: ${colors.white};

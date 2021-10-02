@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledInput, StyledLabel, StyledSpan } from "./Form";
 
-const TextField = ({ label, onChange, maxLength, onEnterKey, disabled, placeholder }) => {
+const TextField = ({ label, name, onChange, type, maxLength, onEnterKey, disabled, placeholder }) => {
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       onEnterKey();
@@ -11,12 +11,13 @@ const TextField = ({ label, onChange, maxLength, onEnterKey, disabled, placehold
   return (
     <StyledLabel>
       <StyledInput
-        type="text"
+        type={type}
         placeholder={placeholder}
         onChange={onChange}
         maxLength={maxLength}
         onKeyPress={handleKeyPress}
         disabled={disabled}
+        name={name}
       />
       <StyledSpan>{label}</StyledSpan>
     </StyledLabel>

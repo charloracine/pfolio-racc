@@ -112,6 +112,49 @@ const Contact = ({ endroit, setEndroit }) => {
             </Button>
           </ButtonGroup>
         </Card>
+        <Card
+          margin="1em 0"
+          color={
+            width < parseInt(size.laptopL) ? colors.halfwhite : "transparent"
+          }
+          textColor={
+            width >= parseInt(size.laptop) ? colors.white : colors.dark
+          }
+        >
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            style={{ width: "100%", display: "flex", flexDirection: "column" }}
+          >
+            <label style={{ margin: "0.5em 0" }}>
+              <TypoH2 color={colors.primary}>Votre nom: </TypoH2>
+              <input type="text" name="name" placeholder="Marco Polo" />
+            </label>
+
+            <label style={{ margin: "0.5em 0" }}>
+              <TypoH2 color={colors.primary}>Votre courriel: </TypoH2>
+              <input
+                type="email"
+                name="email"
+                placeholder="exemple@gmail.com"
+              />
+            </label>
+
+            <label style={{ margin: "0.5em 0" }}>
+              <TypoH2 color={colors.primary}>Message: </TypoH2>
+              <textarea
+                name="message"
+                placeholder="Bonjour Charles-Olivier! Rencontrons-nous!"
+                style={{ width: "95%" }}
+              ></textarea>
+            </label>
+
+            <Button type="submit" size="1" margin="0.5em 0 0 0">
+              Send
+            </Button>
+          </form>
+        </Card>
       </Column>
     </Container>
   );
