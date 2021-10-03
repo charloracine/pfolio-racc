@@ -1,3 +1,4 @@
+export const GestCinema = `
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Experimental.Rendering.Universal;
 
 /// <summary>
-/// Classe qui gère la création des cinématiques
+/// Un gestionnaire de cinema, editeur personnalise pour faciliter l'integation
 /// Auteurs du code: Charles-Olivier Racine
 /// Auteur des commentaires: Charles-Olivier Racine
 /// </summary>
@@ -245,3 +246,5 @@ public class GestCinema : MonoBehaviour
     }
 
 }
+
+    `;

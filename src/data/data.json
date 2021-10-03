@@ -38,7 +38,8 @@
                 "file": "portfolio/pfolio-styledcomp.jpg"
             }
         ],
-        "script": "Projet.js"
+        "script": "Project.js",
+        "type": "javascript"
     },
     {
         "id": 1,
@@ -78,7 +79,8 @@
                 "file": "plantager/pl-add.jpg"
             }
         ],
-        "script": "TransactionEchangeController.php"
+        "script": "TransactionEchangeController.php",
+        "type": "php"
     },
     {
         "id": 2,
@@ -112,7 +114,8 @@
                 "file": "supernova/sn-lvl2.jpg"
             }
         ],
-        "script": "GestCinema.cs"
+        "script": "GestCinema.cs",
+        "type": "csharp"
     },
     {
         "id": 3,
@@ -155,7 +158,8 @@
                 "file": "plein-air/plein-footer.jpg"
             }
         ],
-        "script": null
+        "script": null,
+        "type": null
     },
     {
         "id": 4,
@@ -193,7 +197,8 @@
                 "file": "agrotourisme/agro-client.jpg"
             }
         ],
-        "script": null
+        "script": null,
+        "type": null
     },
     {
         "id": 5,
@@ -216,6 +221,7 @@
                 "file": "jelloveto/jv-animals.jpg"
             }
         ],
-        "script": "jv-style.css"
+        "script": "jv-style.css",
+        "type": "css"
     }
 ]

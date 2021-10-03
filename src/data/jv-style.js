@@ -1,3 +1,4 @@
+export const jvStyle = `
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600|Roboto&display=swap');
 
 /*
@@ -231,3 +232,4 @@ input {
     border-radius: 100em;
     float: right;
 }
+`;

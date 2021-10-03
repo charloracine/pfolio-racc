@@ -1,21 +1,22 @@
+export const TransactionEchangeController = `
 <?php
 
-namespace App\Http\Controllers;
+namespace App\\Http\\Controllers;
 
-use App\TransactionEchange;
-use App\Echange;
-use App\Vente;
-use App\Recolte;
-use App\User;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\\TransactionEchange;
+use App\\Echange;
+use App\\Vente;
+use App\\Recolte;
+use App\\User;
+use Illuminate\\Http\\Request;
+use App\\Http\\Controllers\\Controller;
 
 class TransactionEchangeController extends Controller
 {
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \\Illuminate\\Http\\Response
      */
     public function create(Echange $echange)
     {
@@ -26,8 +27,8 @@ class TransactionEchangeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  \\Illuminate\\Http\\Request  $request
+     * @return \\Illuminate\\Http\\Response
      */
     public function store(Request $request, Echange $echange)
     {
@@ -70,3 +71,5 @@ class TransactionEchangeController extends Controller
         }
     }
 }
+ 
+`;
