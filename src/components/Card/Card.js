@@ -30,3 +30,25 @@ export const Card = styled.div`
     }
   }
 `;
+
+export const CodeCard = styled(Card)`
+  background-color: ${colors.halfwhite};
+  position: absolute;
+  left: -2em;
+  top: -3em;
+  width: 125%;
+  height: 120%;
+  padding: 0;
+  margin: 0;
+  @media ${device.laptop} {
+    max-width: 1000px;
+    left: 0;
+  }
+  @media ${device.laptopL} {
+    max-width: 1400px;
+    left: 0;
+  }
+  @media ${device.desktop} {
+    max-width: 1800px;
+  }
+`;

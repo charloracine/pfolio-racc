@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Column, Container } from "../Container/Container";
 import { Bar } from "../AppBar/Bar";
 import LinkWithIcon from "../Link/LinkWithIcon";
 import { Card } from "../Card/Card";
-import { colors } from "../Colors/Colors";
 import { SideMenu } from "../AppBar/SideMenu";
-import { Body1, ListItem, TypoH1, TypoH3 } from "../Typo/Typo";
+import { TypoH3 } from "../Typo/Typo";
 import { useParams } from "react-router";
 import { Carousel } from "react-responsive-carousel";
+import { size } from "../Device/Device";
 
 const ProjectDetail = ({
   handleDetail,
@@ -16,13 +16,21 @@ const ProjectDetail = ({
   nextProject,
   prevProject,
 }) => {
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+      // console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
+    }
+    window.addEventListener("resize", handleResize);
+  });
   const { project } = useParams();
 
   const myProject = projects.find(
     ({ id: projectId }) => projectId === parseInt(project)
   );
 
-  const { id, nom, cours, resume, tech, images } = myProject;
+  const { id, nom, images } = myProject;
 
   return (
     <SideMenu className={detail ? "detail detail-open" : "detail"}>
@@ -71,32 +79,26 @@ const ProjectDetail = ({
             overflowY="scroll"
           >
             <Column>
-              <Carousel color="black" showThumbs={false} infiniteLoop={true}>
+              <Carousel
+                color="black"
+                showThumbs={width > parseInt(size.tablet)}
+                infiniteLoop={true}
+              >
                 {images.map(({ file, name }) => (
-                  <div>
+                  <div key={name}>
                     <img
                       src={`/images/${file}`}
                       alt={name}
-                      style={{ maxHeight: "350px", objectFit: "contain" }}
+                      style={{
+                        maxWidth: "100%",
+                        maxHeight: "450px",
+                        objectFit: "contain",
+                      }}
                     />
                     <p className="legend">{name}</p>
                   </div>
                 ))}
               </Carousel>
-            </Column>
-            <Column dir="column" size="1">
-              <TypoH1 color={colors.primary}>Cours :</TypoH1>
-              <Body1 color={colors.dark}>{cours}</Body1>
-              <TypoH1 color={colors.primary}>Résumé :</TypoH1>
-              <Body1 color={colors.dark}>{resume}</Body1>
-              <TypoH1 color={colors.primary}>
-                Logiciels et technologies utilisées :
-              </TypoH1>
-              {tech.map((value) => (
-                <ListItem key={value} color={colors.dark}>
-                  {value}
-                </ListItem>
-              ))}
             </Column>
           </Card>
         </Column>

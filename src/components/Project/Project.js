@@ -2,12 +2,23 @@ import React, { useEffect, useState } from "react";
 import { Card } from "../Card/Card";
 import { Body1, DoubleListItem, ListItem, TypoH2 } from "../Typo/Typo";
 import { colors } from "../Colors/Colors";
-import { Button } from "../Button/Button";
+import { Button, ButtonGroup } from "../Button/Button";
 import { Column } from "../Container/Container";
 import { useRouteMatch, useHistory } from "react-router";
 import { size } from "../Device/Device";
 
-const Project = ({ id, nom, cours, resume, tech, images, detail }) => {
+const Project = ({
+  id,
+  nom,
+  cours,
+  resume,
+  tech,
+  images,
+  detail,
+  script,
+  showCode,
+  code,
+}) => {
   const { push } = useHistory();
   const { path } = useRouteMatch();
   const [width, setWidth] = useState(window.innerWidth);
@@ -33,7 +44,11 @@ const Project = ({ id, nom, cours, resume, tech, images, detail }) => {
           <img
             src={`/images/${images[0].file}`}
             alt={images[0].name}
-            style={{ maxWidth: "100%", margin: "0.5em 0", objectFit: "contain" }}
+            style={{
+              maxWidth: "100%",
+              margin: "0.5em 0",
+              objectFit: "contain",
+            }}
           />
         </Column>
         <TypoH2 color="currentColor">Résumé</TypoH2>
@@ -47,17 +62,32 @@ const Project = ({ id, nom, cours, resume, tech, images, detail }) => {
           </ListItem>
         ))}
       </Column>
-      <Button
-        color="currentColor"
-        margin="1em 0 0"
-        outlined
-        onClick={() => {
-          detail();
-          push(`${path}/${id}`);
-        }}
-      >
-        Voir plus
-      </Button>
+      <Column margin="1em 0 0">
+        <ButtonGroup>
+          <Button
+            size="2"
+            color="currentColor"
+            outlined
+            onClick={() => {
+              detail();
+              push(`${path}/${id}`);
+            }}
+          >
+            Photos
+          </Button>
+          <Button
+            size="1"
+            color={colors.comp}
+            disabled={script === null}
+            onClick={() => {
+              showCode(id);
+              code();
+            }}
+          >
+            Code
+          </Button>
+        </ButtonGroup>
+      </Column>
     </Card>
   );
 };

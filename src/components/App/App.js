@@ -17,7 +17,9 @@ import { size } from "../Device/Device";
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
-  const [endroit, setEndroit] = useState("/homepage");
+  const [endroit, setEndroit] = useState(
+    `/${window.location.pathname.split("/")[1]}`
+  );
   useEffect(() => {
     function handleResize() {
       setWidth(window.innerWidth);
