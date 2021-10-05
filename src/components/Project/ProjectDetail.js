@@ -4,10 +4,12 @@ import { Bar } from "../AppBar/Bar";
 import LinkWithIcon from "../Link/LinkWithIcon";
 import { Card } from "../Card/Card";
 import { SideMenu } from "../AppBar/SideMenu";
-import { TypoH3 } from "../Typo/Typo";
+import { TypoH3, TypoH2, Body1 } from "../Typo/Typo";
 import { useParams } from "react-router";
 import { Carousel } from "react-responsive-carousel";
 import { size } from "../Device/Device";
+import { colors } from "../Colors/Colors";
+import { ListItem } from "../Typo/Typo";
 
 const ProjectDetail = ({
   handleDetail,
@@ -30,7 +32,7 @@ const ProjectDetail = ({
     ({ id: projectId }) => projectId === parseInt(project)
   );
 
-  const { id, nom, images } = myProject;
+  const { id, nom, images, resume, tech } = myProject;
 
   return (
     <SideMenu className={detail ? "detail detail-open" : "detail"}>
@@ -99,6 +101,18 @@ const ProjectDetail = ({
                   </div>
                 ))}
               </Carousel>
+            </Column>
+            <Column dir="column">
+              <TypoH2 color="currentColor">Résumé</TypoH2>
+              <Body1 color={colors.dark}>{resume}</Body1>
+              <TypoH2 margin="0 0 0.5em" color="currentColor">
+                Logiciels et technologies
+              </TypoH2>
+              {tech.map((value) => (
+                <ListItem key={value} color={colors.dark}>
+                  {value}
+                </ListItem>
+              ))}
             </Column>
           </Card>
         </Column>

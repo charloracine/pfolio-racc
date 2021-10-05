@@ -18,13 +18,13 @@ export const Card = styled.div`
   justify-content: center;
   justify-content: ${(props) => props.justify};
   @media ${device.laptop} {
-    max-width: 450px;
+    
     &.detail {
       max-width: 800px;
     }
   }
   @media ${device.laptopL} {
-    min-width: 450px;
+    
     &.detail {
       min-width: 800px;
     }
