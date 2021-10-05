@@ -7,7 +7,8 @@ import { colors } from "../Colors/Colors";
 import { ButtonGroup, Button } from "../Button/Button";
 import { useHistory } from "react-router";
 import { size } from "../Device/Device";
-const Contact = ({ endroit, setEndroit }) => {
+import { Link } from "react-router-dom";
+const Contact = ({ setEndroit }) => {
   const { push } = useHistory();
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -17,13 +18,6 @@ const Contact = ({ endroit, setEndroit }) => {
     }
     window.addEventListener("resize", handleResize);
   });
-
-  const showCv = () => {
-    window.open(
-      `https://drive.google.com/file/d/1KLg6nmqIXaMoQAMnJQlo0RoOSIZDAKDA/view?usp=sharing`,
-      `_blank`
-    );
-  };
 
   return (
     <Container dir="column" size={1} pd={0} pdt="1em">
@@ -50,16 +44,6 @@ const Contact = ({ endroit, setEndroit }) => {
           <Column dir="column">
             <TypoH2 color={colors.primary}>Réseaux sociaux</TypoH2>
             <Column align="center" pd="1em">
-              <Button
-                pd="0"
-                fontSize="2rem"
-                outlined
-                color={colors.comp}
-                margin="0 0.5em 0 0"
-                onClick={() => showCv()}
-              >
-                cv
-              </Button>
               <LinkWithIcon
                 pd="3px 5px"
                 fontSize="2em"
@@ -86,6 +70,31 @@ const Contact = ({ endroit, setEndroit }) => {
                 }}
                 target="_blank"
               />
+              <Link
+                style={{
+                  display: "flex",
+                  textDecoration: "none",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  margin: "1em",
+                }}
+                to="/Charles-Olivier_Racine_CV.pdf"
+                target="_blank"
+                download
+              >
+                <span
+                  style={{
+                    border: "3px solid #C12024",
+                    borderRadius: "10px",
+                    fontSize: "1.5rem",
+                    fontWeight: "900",
+                    padding: "5px",
+                    color: "#C12024",
+                  }}
+                >
+                  CV
+                </span>
+              </Link>
             </Column>
           </Column>
           <ButtonGroup margin="1em 0 0">
@@ -112,49 +121,6 @@ const Contact = ({ endroit, setEndroit }) => {
             </Button>
           </ButtonGroup>
         </Card>
-        {/* <Card
-          margin="1em 0"
-          color={
-            width < parseInt(size.laptopL) ? colors.halfwhite : "transparent"
-          }
-          textColor={
-            width >= parseInt(size.laptop) ? colors.white : colors.dark
-          }
-        >
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            style={{ width: "100%", display: "flex", flexDirection: "column" }}
-          >
-            <label style={{ margin: "0.5em 0" }}>
-              <TypoH2 color={colors.primary}>Votre nom: </TypoH2>
-              <input type="text" name="name" placeholder="Marco Polo" />
-            </label>
-
-            <label style={{ margin: "0.5em 0" }}>
-              <TypoH2 color={colors.primary}>Votre courriel: </TypoH2>
-              <input
-                type="email"
-                name="email"
-                placeholder="exemple@gmail.com"
-              />
-            </label>
-
-            <label style={{ margin: "0.5em 0" }}>
-              <TypoH2 color={colors.primary}>Message: </TypoH2>
-              <textarea
-                name="message"
-                placeholder="Bonjour Charles-Olivier! Rencontrons-nous!"
-                style={{ width: "95%" }}
-              ></textarea>
-            </label>
-
-            <Button type="submit" size="1" margin="0.5em 0 0 0">
-              Send
-            </Button>
-          </form>
-        </Card> */}
       </Column>
     </Container>
   );

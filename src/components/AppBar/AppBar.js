@@ -7,7 +7,6 @@ import { TypoH1 } from "../Typo/Typo";
 import { Bar } from "./Bar";
 import { SideMenu } from "./SideMenu";
 import { colors } from "../Colors/Colors";
-import { Button } from "../Button/Button";
 import { size } from "../Device/Device";
 import { Link } from "react-router-dom";
 
@@ -21,13 +20,6 @@ const AppBar = ({ endroit, setEndroit }) => {
     }
     window.addEventListener("resize", handleResize);
   });
-
-  const showCv = () => {
-    window.open(
-      `https://drive.google.com/file/d/1KLg6nmqIXaMoQAMnJQlo0RoOSIZDAKDA/view?usp=sharing`,
-      `_blank`
-    );
-  };
 
   const handleMenu = () => {
     return setSidemenu(!sidemenu);
@@ -119,16 +111,31 @@ const AppBar = ({ endroit, setEndroit }) => {
                     }}
                     target="_blank"
                   />
-                  <Button
-                    pd="0"
-                    fontSize="2rem"
-                    outlined
-                    color={colors.comp}
-                    margin="0 0 0 0.5em"
-                    onClick={() => showCv()}
+                  <Link
+                    style={{
+                      display: "flex",
+                      textDecoration: "none",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "1em",
+                    }}
+                    to="/Charles-Olivier_Racine_CV.pdf"
+                    target="_blank"
+                    download
                   >
-                    cv
-                  </Button>
+                    <span
+                      style={{
+                        border: "3px solid #C12024",
+                        borderRadius: "10px",
+                        fontSize: "1.5rem",
+                        fontWeight: "900",
+                        padding: "5px",
+                        color: "#C12024",
+                      }}
+                    >
+                      CV
+                    </span>
+                  </Link>
                 </Column>
               </Card>
             </Column>
@@ -225,16 +232,31 @@ const AppBar = ({ endroit, setEndroit }) => {
                 }}
                 target="_blank"
               />
-              <Button
-                pd="0"
-                fontSize="2rem"
-                outlined
-                color={colors.comp}
-                margin="0.5em 0.5em"
-                onClick={() => showCv()}
+              <Link
+                style={{
+                  display: "flex",
+                  textDecoration: "none",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  margin: "1em",
+                }}
+                to="/Charles-Olivier_Racine_CV.pdf"
+                target="_blank"
+                download
               >
-                cv
-              </Button>
+                <span
+                  style={{
+                    border: "3px solid #C12024",
+                    borderRadius: "10px",
+                    fontSize: "1.5rem",
+                    fontWeight: "900",
+                    padding: "5px",
+                    color: "#C12024",
+                  }}
+                >
+                  CV
+                </span>
+              </Link>
             </Column>
           </Column>
         )}
