@@ -28,6 +28,7 @@ const About = ({ endroit, setEndroit }) => {
           textColor={
             width >= parseInt(size.laptop) ? colors.white : colors.dark
           }
+          className="infos"
         >
           <Column dir="column">
             <TypoH2 color={colors.primary}>Ce que je suis...</TypoH2>

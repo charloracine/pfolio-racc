@@ -30,6 +30,7 @@ const Contact = ({ setEndroit }) => {
           textColor={
             width >= parseInt(size.laptop) ? colors.white : colors.dark
           }
+          className="infos"
         >
           <Column dir="column">
             <TypoH2 color={colors.primary}>Adresse électronique</TypoH2>

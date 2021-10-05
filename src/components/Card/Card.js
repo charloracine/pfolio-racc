@@ -17,8 +17,10 @@ export const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   justify-content: ${(props) => props.justify};
+  &.infos{
+    max-width: 500px;
+  }
   @media ${device.laptop} {
-    
     &.detail {
       max-width: 800px;
     }

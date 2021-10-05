@@ -28,6 +28,7 @@ const Homepage = ({ endroit, setEndroit }) => {
             width >= parseInt(size.laptop) ? colors.white : colors.dark
           }
           pd={width >= parseInt(size.laptop) && "0 1em 0 0"}
+          className="infos"
         >
           <Column dir="column" size="1">
             {width >= parseInt(size.laptop) ? (
