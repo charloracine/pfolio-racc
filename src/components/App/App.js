@@ -20,6 +20,7 @@ function App() {
   const [endroit, setEndroit] = useState(
     `/${window.location.pathname.split("/")[1]}`
   );
+
   useEffect(() => {
     function handleResize() {
       setWidth(window.innerWidth);

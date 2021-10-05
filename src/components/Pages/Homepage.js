@@ -19,7 +19,7 @@ const Homepage = ({ endroit, setEndroit }) => {
   return (
     <Container dir="column" size={1} pd={0} pdt="1em">
       <Column size="1" dir="column" className="content">
-        <TypoH1>DEVELOPPEUR WEB FULL STACK</TypoH1>
+        <TypoH1>DÉVELOPPEUR WEB</TypoH1>
         <Card
           color={
             width >= parseInt(size.laptop) ? "transparent" : colors.halfwhite
