@@ -12,8 +12,8 @@ import { colors } from "../Colors/Colors";
 
 const ProjectCode = ({ code, codeId, projects }) => {
   const tableCode = [
-    { script: project, type: "javascript" },
     { script: TransactionEchangeController, type: "php" },
+    { script: project, type: "javascript" },
     { script: GestCinema, type: "csharp" },
     { script: null, type: null },
     { script: null, type: null },
