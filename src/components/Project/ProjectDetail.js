@@ -32,7 +32,7 @@ const ProjectDetail = ({
     ({ id: projectId }) => projectId === parseInt(project)
   );
 
-  const { id, nom, images, resume, tech } = myProject;
+  const { id, nom, cours, images, resume, tech } = myProject;
 
   return (
     <SideMenu className={detail ? "detail detail-open" : "detail"}>
@@ -80,39 +80,45 @@ const ProjectDetail = ({
             className="detail"
             overflowY="scroll"
           >
-            <Column>
-              <Carousel
-                color="black"
-                showThumbs={width > parseInt(size.tablet)}
-                infiniteLoop={true}
-              >
-                {images.map(({ file, name }) => (
-                  <div key={name}>
-                    <img
-                      src={`/images/${file}`}
-                      alt={name}
-                      style={{
-                        maxWidth: "100%",
-                        maxHeight: "450px",
-                        objectFit: "contain",
-                      }}
-                    />
-                    <p className="legend">{name}</p>
-                  </div>
+            <Column dir={width > parseInt(size.laptopL) ? "row" : "column"} >
+              <Column size="2">
+                <Carousel
+                  color="black"
+                  showThumbs={width > parseInt(size.tablet)}
+                  infiniteLoop={true}
+                >
+                  {images.map(({ file, name }) => (
+                    <div key={name}>
+                      <img
+                        src={`/images/${file}`}
+                        alt={name}
+                        style={{
+                          maxWidth: "100%",
+                          maxHeight: "450px",
+                          objectFit: "contain",
+                        }}
+                      />
+                      <p className="legend">{name}</p>
+                    </div>
+                  ))}
+                </Carousel>
+              </Column>
+              <Column dir="column" size="1" pd="1em">
+                <TypoH2 color="currentColor">Titre du projet</TypoH2>
+                <Body1 color="currentColor">{nom}</Body1>
+                <TypoH2 color="currentColor">Domaine</TypoH2>
+                <Body1 color={colors.dark}>{cours}</Body1>
+                <TypoH2 color="currentColor">Résumé</TypoH2>
+                <Body1 color={colors.dark}>{resume}</Body1>
+                <TypoH2 margin="0 0 0.5em" color="currentColor">
+                  Logiciels et technologies
+                </TypoH2>
+                {tech.map((value) => (
+                  <ListItem key={value} color={colors.dark}>
+                    {value}
+                  </ListItem>
                 ))}
-              </Carousel>
-            </Column>
-            <Column dir="column">
-              <TypoH2 color="currentColor">Résumé</TypoH2>
-              <Body1 color={colors.dark}>{resume}</Body1>
-              <TypoH2 margin="0 0 0.5em" color="currentColor">
-                Logiciels et technologies
-              </TypoH2>
-              {tech.map((value) => (
-                <ListItem key={value} color={colors.dark}>
-                  {value}
-                </ListItem>
-              ))}
+              </Column>
             </Column>
           </Card>
         </Column>

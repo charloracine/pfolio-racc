@@ -33,6 +33,7 @@ export const Column = styled.div`
   flex-wrap: ${(props) => props.wrap};
   overflow: ${(props) => props.overflow};
   display: flex;
+  max-width: ${(props) => props.maxWidth};
   flex-direction: ${(props) => props.dir};
   justify-content: ${(props) => props.justify};
   align-items: ${(props) => props.align};

@@ -20,7 +20,7 @@ export const Card = styled.div`
   &.infos{
     max-width: 500px;
   }
-  @media ${device.laptop} {
+  /* @media ${device.laptop} {
     &.detail {
       max-width: 800px;
     }
@@ -30,7 +30,7 @@ export const Card = styled.div`
     &.detail {
       min-width: 800px;
     }
-  }
+  } */
 `;
 
 export const CodeCard = styled(Card)`

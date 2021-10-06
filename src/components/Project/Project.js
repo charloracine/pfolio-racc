@@ -38,6 +38,10 @@ const Project = ({
               margin: "0.5em 0",
               objectFit: "contain",
             }}
+            onClick={() => {
+              detail();
+              push(`${path}/${id}`);
+            }}
           />
         </Column>
       </Column>
