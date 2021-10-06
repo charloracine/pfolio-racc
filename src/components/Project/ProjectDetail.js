@@ -45,8 +45,8 @@ const ProjectDetail = ({
               onClick={() => handleDetail()}
             />
           </Column>
-          <Column size={1} justify="space-between" pdr="2em">
-            <Column size="1">
+          <Column size={1} pdr="2em">
+            <Column>
               <TypoH3>{nom}</TypoH3>
             </Column>
             <Column>
