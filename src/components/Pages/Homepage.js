@@ -40,14 +40,7 @@ const Homepage = () => {
               }
             >
               Je suis étudiant-finissant en Techniques d’intégration multimédia,
-              profil logique. Mention DEC+ Ultra.
-            </Body1>
-            <Body1
-              color={
-                width >= parseInt(size.laptop) ? colors.white : colors.dark
-              }
-            >
-              (Portfolio en développement.)
+              profil programmation.
             </Body1>
           </Column>
           <Column dir="column" pd="1em 0">

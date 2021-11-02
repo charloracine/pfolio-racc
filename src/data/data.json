@@ -3,7 +3,7 @@
         "id": 0,
         "nom": "Plantager",
         "cours": "Web",
-        "resume": "Simulation d'une plateforme d'échange et de vente de culture agricoles. Création d'un profil utilisateur, gestion d'un potager et de ses plants. Gestion de vente et échange entre utilisateurs.",
+        "resume": "Simulation d'une plateforme en Laravel. Création d'un profil utilisateur, gestion d'un potager et de ses plants. Gestion des ventes et des échanges entre les utilisateurs.",
         "tech": [
             "Laravel",
             "PHP",
@@ -38,13 +38,14 @@
             }
         ],
         "script": "TransactionEchangeController.php",
-        "type": "php"
+        "type": "php",
+        "team": "Edward Bisson, Marie-Elaine Lopez, Raphaël Blais, Samuel Rondeau"
     },
     {
         "id": 1,
         "nom": "Mon portfolio",
         "cours": "Projet personnel",
-        "resume": "L'application sur laquelle vous lisez ceci est mon portfolio. Il est « Mobile-First », c'est mon outil promotionnel #1.",
+        "resume": "Une application React qui me sert d'outil promotionnel.",
         "tech": [
             "ReactJS",
             "JavaScript",
@@ -80,7 +81,8 @@
             }
         ],
         "script": "Project.js",
-        "type": "javascript"
+        "type": "javascript",
+        "team": null
     },
     {
         "id": 2,
@@ -115,7 +117,8 @@
             }
         ],
         "script": "GestCinema.cs",
-        "type": "csharp"
+        "type": "csharp",
+        "team": "Marie-Elaine Lopez, Benjamin Dumont"
     },
     {
         "id": 3,
@@ -159,13 +162,14 @@
             }
         ],
         "script": null,
-        "type": null
+        "type": null,
+        "team": null
     },
     {
         "id": 4,
         "nom": "Agrotourisme",
         "cours": "Web",
-        "resume": "Un projet du cours d'élément d'interactivité, un cours d'ergonomie. Le devis est très strict et simule le marché du travail.",
+        "resume": "Projet visant l'ergonomie d'un site web avec un devis simulant le marché du travail.",
         "tech": [
             "Axure RP 9",
             "Illustrator"
@@ -198,13 +202,14 @@
             }
         ],
         "script": null,
-        "type": null
+        "type": null,
+        "team": null
     },
     {
         "id": 5,
         "nom": "Jello Veto",
         "cours": "Web",
-        "resume": "Ma première fierté en HTML 5 & CSS 3 pour le cours de Web 2. (Première année)",
+        "resume": "Simulation d'un site web d'un vétérinaire (HTML5 & CSS3 - 2019)",
         "tech": [
             "HTML 5",
             "CSS 3"
@@ -222,6 +227,7 @@
             }
         ],
         "script": "jv-style.css",
-        "type": "css"
+        "type": "css",
+        "team": null
     }
 ]
