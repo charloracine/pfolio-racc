@@ -10,10 +10,12 @@ import { colors } from "../Colors/Colors";
 import { size } from "../Device/Device";
 import { Link } from "react-router-dom";
 import { useWindowSize } from "../../hooks/useWindowSize";
+import { usePathname } from "../../hooks/usePathname";
 
-const AppBar = ({ endroit, setEndroit }) => {
+const AppBar = () => {
   const [sidemenu, setSidemenu] = useState(false);
   const { width } = useWindowSize();
+  const { path: endroit } = usePathname();
 
   const handleMenu = () => {
     return setSidemenu(!sidemenu);
@@ -43,7 +45,6 @@ const AppBar = ({ endroit, setEndroit }) => {
                   to="/homepage"
                   onClick={() => {
                     handleMenu();
-                    setEndroit("/homepage");
                   }}
                 >
                   Accueil
@@ -53,7 +54,6 @@ const AppBar = ({ endroit, setEndroit }) => {
                   to="/portfolio"
                   onClick={() => {
                     handleMenu();
-                    setEndroit("/portfolio");
                   }}
                 >
                   Portfolio
@@ -63,7 +63,6 @@ const AppBar = ({ endroit, setEndroit }) => {
                   to="/about"
                   onClick={() => {
                     handleMenu();
-                    setEndroit("/about");
                   }}
                 >
                   À propos
@@ -73,7 +72,6 @@ const AppBar = ({ endroit, setEndroit }) => {
                   to="/contact"
                   onClick={() => {
                     handleMenu();
-                    setEndroit("/contact");
                   }}
                 >
                   Contacter
@@ -148,9 +146,7 @@ const AppBar = ({ endroit, setEndroit }) => {
             </Column>
             <Column size={1} justify="space-between" pdr="2em">
               <TypoH1>
-                <Link to="/homepage" onClick={() => setEndroit("/homepage")}>
-                  Charles-Olivier Racine
-                </Link>
+                <Link to="/homepage">Charles-Olivier Racine</Link>
               </TypoH1>
             </Column>
           </>
@@ -162,7 +158,6 @@ const AppBar = ({ endroit, setEndroit }) => {
                 className={
                   endroit === "/homepage" ? "desktop selected" : "desktop"
                 }
-                onClick={() => setEndroit("/homepage")}
               >
                 Charles-Olivier Racine
               </StyledLink>
@@ -174,7 +169,6 @@ const AppBar = ({ endroit, setEndroit }) => {
                 }
                 color={colors.white}
                 to="/portfolio"
-                onClick={() => setEndroit("/portfolio")}
               >
                 Portfolio
               </StyledLink>
@@ -184,7 +178,6 @@ const AppBar = ({ endroit, setEndroit }) => {
                 }
                 color={colors.white}
                 to="/about"
-                onClick={() => setEndroit("/about")}
               >
                 À propos
               </StyledLink>
@@ -194,7 +187,6 @@ const AppBar = ({ endroit, setEndroit }) => {
                 }
                 color={colors.white}
                 to="/contact"
-                onClick={() => setEndroit("/contact")}
               >
                 Contacter
               </StyledLink>

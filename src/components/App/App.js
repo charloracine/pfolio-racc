@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { Container } from "../Container/Container";
 import "./App.css";
@@ -18,9 +18,6 @@ import { useWindowSize } from "../../hooks/useWindowSize";
 
 function App() {
   const { width } = useWindowSize();
-  const [endroit, setEndroit] = useState(
-    `/${window.location.pathname.split("/")[1]}`
-  );
 
   const src = () => {
     if (width < parseInt(size.mobileL)) return "/images/mobileme.png";
@@ -31,7 +28,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App" style={{ backgroundColor: "white" }}>
-        <AppBar endroit={endroit} setEndroit={setEndroit} />
+        <AppBar />
         <Column size="1" justify="flex-end">
           <Column size="1" overflow="hidden" pd="0">
             <img
@@ -57,16 +54,16 @@ function App() {
           >
             <Switch>
               <Route path="/homepage">
-                <Homepage endroit={endroit} setEndroit={setEndroit} />
+                <Homepage />
               </Route>
               <Route path="/portfolio">
                 <Portfolio projects={projectData} />
               </Route>
               <Route path="/about">
-                <About endroit={endroit} setEndroit={setEndroit} />
+                <About />
               </Route>
               <Route path="/contact">
-                <Contact endroit={endroit} setEndroit={setEndroit} />
+                <Contact />
               </Route>
               <Redirect to="/homepage" />
             </Switch>

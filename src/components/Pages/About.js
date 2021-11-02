@@ -7,7 +7,7 @@ import { ButtonGroup, Button } from "../Button/Button";
 import { useHistory } from "react-router";
 import { size } from "../Device/Device";
 import { useWindowSize } from "../../hooks/useWindowSize";
-const About = ({ endroit, setEndroit }) => {
+const About = () => {
   const { push } = useHistory();
   const { width } = useWindowSize();
 
@@ -56,7 +56,6 @@ const About = ({ endroit, setEndroit }) => {
               margin="0 0 0.5em 0"
               onClick={() => {
                 push("/portfolio");
-                setEndroit("/portfolio");
               }}
             >
               Portfolio
@@ -66,7 +65,6 @@ const About = ({ endroit, setEndroit }) => {
               outlined
               onClick={() => {
                 push("/contact");
-                setEndroit("/contact");
               }}
             >
               Contacter

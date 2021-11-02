@@ -9,7 +9,7 @@ import { useHistory } from "react-router";
 import { size } from "../Device/Device";
 import { Link } from "react-router-dom";
 import { useWindowSize } from "../../hooks/useWindowSize";
-const Contact = ({ setEndroit }) => {
+const Contact = () => {
   const { push } = useHistory();
   const { width } = useWindowSize();
 
@@ -99,7 +99,6 @@ const Contact = ({ setEndroit }) => {
               margin="0 0 0.5em 0"
               onClick={() => {
                 push("/portfolio");
-                setEndroit("/portfolio");
               }}
             >
               Portfolio
@@ -109,7 +108,6 @@ const Contact = ({ setEndroit }) => {
               outlined
               onClick={() => {
                 push("/about");
-                setEndroit("/about");
               }}
             >
               À propos
