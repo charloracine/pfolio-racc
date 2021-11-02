@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Column, Container } from "../Container/Container";
 import { StyledLink } from "../Link/Link";
 import LinkWithIcon from "../Link/LinkWithIcon";
@@ -9,17 +9,11 @@ import { SideMenu } from "./SideMenu";
 import { colors } from "../Colors/Colors";
 import { size } from "../Device/Device";
 import { Link } from "react-router-dom";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 const AppBar = ({ endroit, setEndroit }) => {
   const [sidemenu, setSidemenu] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth);
-      // console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
-    }
-    window.addEventListener("resize", handleResize);
-  });
+  const { width } = useWindowSize();
 
   const handleMenu = () => {
     return setSidemenu(!sidemenu);

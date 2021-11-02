@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import { Container } from "../Container/Container";
 import "./App.css";
@@ -14,20 +14,13 @@ import projectData from "../../data/data.json";
 import Contact from "../Pages/Contact";
 import { Column } from "../Container/Container";
 import { size } from "../Device/Device";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 function App() {
-  const [width, setWidth] = useState(window.innerWidth);
+  const { width } = useWindowSize();
   const [endroit, setEndroit] = useState(
     `/${window.location.pathname.split("/")[1]}`
   );
-
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth);
-      // console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
-    }
-    window.addEventListener("resize", handleResize);
-  });
 
   const src = () => {
     if (width < parseInt(size.mobileL)) return "/images/mobileme.png";

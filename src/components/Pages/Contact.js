@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Column, Container } from "../Container/Container";
 import LinkWithIcon from "../Link/LinkWithIcon";
 import { Body1, TypoH1, TypoH2 } from "../Typo/Typo";
@@ -8,16 +8,10 @@ import { ButtonGroup, Button } from "../Button/Button";
 import { useHistory } from "react-router";
 import { size } from "../Device/Device";
 import { Link } from "react-router-dom";
+import { useWindowSize } from "../../hooks/useWindowSize";
 const Contact = ({ setEndroit }) => {
   const { push } = useHistory();
-  const [width, setWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth);
-      // console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
-    }
-    window.addEventListener("resize", handleResize);
-  });
+  const { width } = useWindowSize();
 
   return (
     <Container dir="column" size={1} pd={0} pdt="1em">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Column, Container } from "../Container/Container";
 import { Bar } from "../AppBar/Bar";
 import LinkWithIcon from "../Link/LinkWithIcon";
@@ -10,6 +10,7 @@ import { Carousel } from "react-responsive-carousel";
 import { size } from "../Device/Device";
 import { colors } from "../Colors/Colors";
 import { ListItem } from "../Typo/Typo";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 const ProjectDetail = ({
   handleDetail,
@@ -18,14 +19,7 @@ const ProjectDetail = ({
   nextProject,
   prevProject,
 }) => {
-  const [width, setWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth);
-      // console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
-    }
-    window.addEventListener("resize", handleResize);
-  });
+  const { width } = useWindowSize();
   const { project } = useParams();
 
   const myProject = projects.find(
@@ -80,7 +74,7 @@ const ProjectDetail = ({
             className="detail"
             overflowY="scroll"
           >
-            <Column dir={width > parseInt(size.laptopL) ? "row" : "column"} >
+            <Column dir={width > parseInt(size.laptopL) ? "row" : "column"}>
               <Column size="2">
                 <Carousel
                   color="black"

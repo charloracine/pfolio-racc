@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Column, Container } from "../Container/Container";
 import { Body1, TypoH1, TypoH2, TypoHeading } from "../Typo/Typo";
 import { Card } from "../Card/Card";
@@ -6,15 +6,10 @@ import { colors } from "../Colors/Colors";
 import { ButtonGroup, Button } from "../Button/Button";
 import { useHistory } from "react-router";
 import { size } from "../Device/Device";
+import { useWindowSize } from "../../hooks/useWindowSize";
 const Homepage = ({ endroit, setEndroit }) => {
   const { push } = useHistory();
-  const [width, setWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth);
-    }
-    window.addEventListener("resize", handleResize);
-  });
+  const { width } = useWindowSize();
 
   return (
     <Container dir="column" size={1} pd={0} pdt="1em">
