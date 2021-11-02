@@ -4,7 +4,7 @@ import { Bar } from "../AppBar/Bar";
 import LinkWithIcon from "../Link/LinkWithIcon";
 import { Card } from "../Card/Card";
 import { SideMenu } from "../AppBar/SideMenu";
-import { TypoH3, TypoH2, Body1, TypoH1 } from "../Typo/Typo";
+import { TypoH3, TypoH2, Body1 } from "../Typo/Typo";
 import { useParams } from "react-router";
 import { Carousel } from "react-responsive-carousel";
 import { size } from "../Device/Device";
